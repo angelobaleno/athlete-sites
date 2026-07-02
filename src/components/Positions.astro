@@ -1,0 +1,71 @@
+---
+import { positions } from '../data/site';
+---
+
+<section class="section" id="positions">
+  <div class="wrap">
+    <p class="eyebrow reveal">Versatility</p>
+    <h2 class="section-title reveal">Plays Both Sides</h2>
+    <p class="pos__lead reveal">
+      Primary defensive back — also lines up at linebacker, receiver, and tight end.
+      A four-position chess piece who can be used all over the field.
+    </p>
+
+    <div class="field reveal" role="list" aria-label="Positions played">
+      {positions.map((p) => (
+        <div class={`chip ${p.primary ? 'chip--primary' : ''}`} role="listitem">
+          <span class="chip__code">{p.code}</span>
+          <span class="chip__name">{p.name}</span>
+          {p.primary && <span class="chip__flag">Primary</span>}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pos__lead { color: var(--muted); margin-top: 1.2rem; max-width: 60ch; }
+
+  .field {
+    margin-top: 2.5rem; position: relative;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background:
+      linear-gradient(rgba(14,14,16,0.72), rgba(14,14,16,0.72)),
+      repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 2px), var(--gold) calc(12.5% - 2px) 12.5%);
+    background-blend-mode: normal;
+  }
+  /* dim the yard lines */
+  .field::before {
+    content: ''; position: absolute; inset: 0; border-radius: var(--radius);
+    background: rgba(14,14,16,0.55); pointer-events: none;
+  }
+
+  .chip {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: 0.35rem;
+    padding: 1.4rem 0.6rem; text-align: center;
+    background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .chip__code {
+    font-family: var(--display); font-weight: 900; font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1; color: var(--bone);
+  }
+  .chip__name {
+    font-family: var(--display); font-weight: 600; font-size: 0.75rem;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  }
+  .chip--primary { border-color: var(--gold); background: linear-gradient(180deg, rgba(242,168,29,0.12), var(--ink-3)); }
+  .chip--primary .chip__code { color: var(--gold); }
+  .chip__flag {
+    margin-top: 0.2rem;
+    font-family: var(--display); font-weight: 700; font-size: 0.62rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);
+    background: var(--gold); padding: 0.1rem 0.45rem; border-radius: 2px;
+  }
+
+  @media (max-width: 560px) {
+    .field { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

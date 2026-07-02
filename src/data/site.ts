@@ -74,6 +74,49 @@ export const academics = {
   major: { value: 'To be determined', placeholder: true },
 };
 
+// College offers — the strongest external validation on the page.
+export interface Offer {
+  school: string;
+  short: string;
+  level: string;
+  location: string;
+}
+export const offers: Offer[] = [
+  { school: 'Robert Morris University', short: 'RMU', level: 'NCAA Division I · FCS', location: 'Moon Township, PA' },
+];
+
+// Positions he lines up at — versatility is a selling point. DB is primary.
+export const positions = [
+  { code: 'DB', name: 'Defensive Back', primary: true },
+  { code: 'LB', name: 'Linebacker', primary: false },
+  { code: 'WR', name: 'Wide Receiver', primary: false },
+  { code: 'TE', name: 'Tight End', primary: false },
+];
+
+// 2026 senior-season schedule (source: MaxPreps, updated Jun 2026).
+export const scheduleMeta = {
+  season: '2026 · Senior Season',
+  kickoff: '7:00 PM',
+  homeVenue: 'Plum HS · 900 Elicker Rd, Pittsburgh',
+};
+export interface Game {
+  date: string;
+  opp: string;
+  home: boolean;
+  conf: boolean;
+}
+export const schedule: Game[] = [
+  { date: 'Sep 4',  opp: 'Franklin Regional', home: false, conf: false },
+  { date: 'Sep 11', opp: 'Fox Chapel',        home: false, conf: true  },
+  { date: 'Sep 18', opp: 'Shaler Area',       home: true,  conf: true  },
+  { date: 'Sep 25', opp: 'Kiski Area',        home: true,  conf: false },
+  { date: 'Oct 2',  opp: 'Armstrong',         home: true,  conf: true  },
+  { date: 'Oct 9',  opp: 'Moon Area',         home: true,  conf: false },
+  { date: 'Oct 16', opp: 'North Hills',       home: false, conf: true  },
+  { date: 'Oct 23', opp: 'Penn Hills',        home: false, conf: true  },
+  { date: 'Oct 30', opp: 'Pine-Richland',     home: true,  conf: true  },
+];
+
 export const contact = {
   athlete: {
     name: 'Tyler Baleno',

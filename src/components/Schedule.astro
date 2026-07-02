@@ -1,0 +1,72 @@
+---
+import { schedule, scheduleMeta } from '../data/site';
+---
+
+<section class="section section--alt" id="schedule">
+  <div class="wrap">
+    <p class="eyebrow reveal">Come Watch</p>
+    <h2 class="section-title reveal">{scheduleMeta.season}</h2>
+    <p class="sched__meta reveal">
+      All games {scheduleMeta.kickoff} · Home at {scheduleMeta.homeVenue}
+    </p>
+
+    <ul class="sched reveal">
+      {schedule.map((g) => (
+        <li class="game">
+          <span class="game__date">{g.date}</span>
+          <span class={`game__ha ${g.home ? 'is-home' : ''}`}>{g.home ? 'HOME' : 'AWAY'}</span>
+          <span class="game__opp">
+            <span class="game__prep">{g.home ? 'vs' : '@'}</span>{g.opp}
+          </span>
+          {g.conf && <span class="game__conf">Conference</span>}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .sched__meta { color: var(--muted); margin-top: 1.1rem; font-size: 0.95rem; }
+
+  .sched { list-style: none; padding: 0; margin-top: 2.2rem; display: grid; gap: 0; }
+  .game {
+    display: grid;
+    grid-template-columns: 84px 72px 1fr auto;
+    align-items: center; gap: 1rem;
+    padding: 1.05rem 0.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .game:first-child { border-top: 1px solid var(--line); }
+
+  .game__date {
+    font-family: var(--display); font-weight: 800; font-size: 1.05rem;
+    letter-spacing: 0.02em; color: var(--bone);
+  }
+  .game__ha {
+    font-family: var(--display); font-weight: 700; font-size: 0.68rem;
+    letter-spacing: 0.16em; text-align: center;
+    padding: 0.25rem 0; border-radius: 2px;
+    color: var(--muted); border: 1px solid var(--line);
+  }
+  .game__ha.is-home { color: var(--ink); background: var(--gold); border-color: var(--gold); }
+
+  .game__opp {
+    font-family: var(--display); font-weight: 600; font-size: 1.15rem;
+    letter-spacing: 0.02em; text-transform: uppercase;
+  }
+  .game__prep { color: var(--muted); font-weight: 500; margin-right: 0.5rem; }
+
+  .game__conf {
+    font-family: var(--display); font-weight: 600; font-size: 0.66rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--purple-hi);
+    border: 1px solid var(--purple-lo); padding: 0.2rem 0.5rem; border-radius: 2px;
+  }
+
+  @media (max-width: 560px) {
+    .game { grid-template-columns: 60px 1fr; row-gap: 0.4rem; }
+    .game__ha { grid-row: 1; grid-column: 2; justify-self: start; padding: 0.2rem 0.5rem; }
+    .game__opp { grid-column: 2; font-size: 1.05rem; }
+    .game__conf { grid-column: 2; justify-self: start; }
+    .game__date { grid-row: 1 / 3; align-self: start; }
+  }
+</style>
