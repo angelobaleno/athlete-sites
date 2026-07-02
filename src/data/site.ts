@@ -18,10 +18,12 @@ export const player = {
   last: 'Baleno',
   position: 'Defensive Back',
   positionShort: 'DB',
+  jersey: '3',
   gradYear: '2027',
   school: 'Plum Senior High School',
   team: 'Plum Mustangs',
   location: 'Pittsburgh, PA',
+  heroPhoto: 'images/tyler-hero.jpg', // resolved against BASE_URL in Hero
   // Also plays LB / WR / TE — displaying DB only for now.
 };
 
@@ -35,7 +37,8 @@ export const headline: Stat[] = [
 
 // Film — the single most important asset for a recruit.
 export const film = {
-  hudlEmbed: 'https://www.hudl.com/embed/video/3/2T3jkn', // derived from hudl.com/v/2T3jkn
+  // Verified working embed (Tyler Baleno Junior Season).
+  hudlEmbed: 'https://www.hudl.com/embed/video/3/19760495/68fac2deea707630a706ad8c',
   hudlWatch: 'https://www.hudl.com/v/2T3jkn',
   hudlProfile: 'https://www.hudl.com/profile/19760495/Tyler-Baleno',
   title: 'Junior Season Highlights',
@@ -59,7 +62,10 @@ export const production: Stat[] = [
   { label: 'Forced Fumbles', value: '—', placeholder: true },
 ];
 
-export const honors: string[] = ['2× All-Conference — Defensive Back'];
+export const honors: string[] = [
+  '1st Team All-Conference — Defensive Back',
+  '2× All-Conference Selection',
+];
 
 export const academics = {
   gpa: '4.0',
@@ -76,10 +82,10 @@ export const contact = {
     twitterUrl: 'https://x.com/TylerBaleno3',
   },
   coach: {
-    name: 'Head Coach — TBD',
-    title: 'Plum Mustangs Football',
-    contact: 'Contact info to be added',
-    placeholder: true,
+    name: 'Matt Morgan',
+    title: 'Head Coach · Plum Mustangs Football',
+    contact: 'Available on request',
+    placeholder: false,
   },
   hudl: 'https://www.hudl.com/profile/19760495/Tyler-Baleno',
 };

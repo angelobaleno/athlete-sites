@@ -1,5 +1,6 @@
 ---
 import { player, headline, film } from '../data/site';
+const photo = `${import.meta.env.BASE_URL}/${player.heroPhoto}`.replace(/\/{2,}/g, '/');
 ---
 
 <section class="hero" id="top">
@@ -32,11 +33,11 @@ import { player, headline, film } from '../data/site';
     </div>
 
     <div class="hero__photo">
-      <div class="photo-ph hero__photo-inner">
-        <span>Action Photo</span>
-        <span style="font-size:0.68rem; color:var(--faint)">Add to /public/images</span>
+      <div class="hero__photo-inner">
+        <img src={photo} alt={`${player.first} ${player.last}, ${player.team} defensive back`} width="1364" height="1818" fetchpriority="high" />
+        <span class="hero__num" aria-hidden="true">#{player.jersey}</span>
       </div>
-      <span class="hero__jersey" aria-hidden="true">{player.positionShort}</span>
+      <span class="hero__jersey" aria-hidden="true">{player.jersey}</span>
     </div>
   </div>
 </section>
@@ -107,7 +108,23 @@ import { player, headline, film } from '../data/site';
 
   /* Photo */
   .hero__photo { position: relative; }
-  .hero__photo-inner { aspect-ratio: 4 / 5; border-radius: var(--radius); }
+  .hero__photo-inner {
+    position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius);
+    overflow: hidden; border: 1px solid var(--line);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+  }
+  .hero__photo-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+  .hero__photo-inner::after { /* subtle purple wash for cohesion */
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(108,74,160,0.35), transparent 55%);
+    pointer-events: none;
+  }
+  .hero__num {
+    position: absolute; left: 0; bottom: 0; z-index: 2;
+    font-family: var(--display); font-weight: 900; font-size: 1.4rem;
+    letter-spacing: 0.02em; color: var(--ink);
+    background: var(--gold); padding: 0.3rem 0.9rem; border-radius: 0 6px 0 0;
+  }
   .hero__jersey {
     position: absolute; right: -0.3rem; bottom: -1.6rem; z-index: -1;
     font-family: var(--display); font-weight: 900;
