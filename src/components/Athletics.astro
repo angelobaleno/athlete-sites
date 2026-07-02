@@ -1,11 +1,11 @@
 ---
-import { measurables, production, honors } from '../data/site';
+import { measurables, honors } from '../data/site';
 ---
 
 <section class="section section--alt" id="athletics">
   <div class="wrap">
     <p class="eyebrow reveal">The Profile</p>
-    <h2 class="section-title reveal">Measurables &amp; Production</h2>
+    <h2 class="section-title reveal">Measurables</h2>
 
     {honors.length > 0 && (
       <div class="honors reveal">
@@ -24,17 +24,6 @@ import { measurables, production, honors } from '../data/site';
         </div>
       ))}
     </div>
-
-    <h3 class="group-label reveal">Junior Season Production</h3>
-    <div class="grid">
-      {production.map((s) => (
-        <div class={`tile reveal ${s.placeholder ? 'is-placeholder' : ''}`}>
-          <div class="tile__value">{s.value}</div>
-          <div class="tile__label">{s.label}</div>
-        </div>
-      ))}
-    </div>
-    <p class="note reveal">Verified season stats being added — check back or request the full stat sheet.</p>
   </div>
 </section>
 

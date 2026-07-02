@@ -1,5 +1,5 @@
 ---
-import { player, headline, film } from '../data/site';
+import { player, headline } from '../data/site';
 const photo = `${import.meta.env.BASE_URL}/${player.heroPhoto}`.replace(/\/{2,}/g, '/');
 ---
 
@@ -18,8 +18,8 @@ const photo = `${import.meta.env.BASE_URL}/${player.heroPhoto}`.replace(/\/{2,}/
       <p class="hero__meta">{player.team} · {player.location}</p>
 
       <div class="hero__cta">
-        <a href={film.hudlWatch} target="_blank" rel="noopener" class="btn btn--gold">Watch the Film</a>
-        <a href="#contact" class="btn btn--ghost">Contact</a>
+        <a href="#contact" class="btn btn--gold">Contact</a>
+        <a href="#film" class="btn btn--ghost">Watch Film</a>
       </div>
 
       <div class="rail" role="list" aria-label="Key measurables">

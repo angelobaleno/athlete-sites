@@ -80,9 +80,10 @@ export interface Offer {
   short: string;
   level: string;
   location: string;
+  logo?: string; // path under /public; falls back to `short` monogram if absent
 }
 export const offers: Offer[] = [
-  { school: 'Robert Morris University', short: 'RMU', level: 'NCAA Division I · FCS', location: 'Moon Township, PA' },
+  { school: 'Robert Morris University', short: 'RMU', level: 'NCAA Division I · FCS', location: 'Moon Township, PA', logo: 'images/logos/rmu.svg' },
 ];
 
 // Positions he lines up at — versatility is a selling point. DB is primary.
