@@ -1,0 +1,129 @@
+---
+import { player, headline, film } from '../data/site';
+---
+
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">{player.position} · Class of {player.gradYear}</p>
+
+      <h1 class="hero__name">
+        <span>{player.first}</span>
+        <span class="hero__last">{player.last}</span>
+      </h1>
+
+      <p class="hero__meta">{player.team} · {player.location}</p>
+
+      <div class="hero__cta">
+        <a href={film.hudlWatch} target="_blank" rel="noopener" class="btn btn--gold">Watch the Film</a>
+        <a href="#contact" class="btn btn--ghost">Contact</a>
+      </div>
+
+      <div class="rail" role="list" aria-label="Key measurables">
+        {headline.map((s) => (
+          <div class="rail__item" role="listitem">
+            <span class="rail__value">{s.value}</span>
+            <span class="rail__label">{s.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="hero__photo">
+      <div class="photo-ph hero__photo-inner">
+        <span>Action Photo</span>
+        <span style="font-size:0.68rem; color:var(--faint)">Add to /public/images</span>
+      </div>
+      <span class="hero__jersey" aria-hidden="true">{player.positionShort}</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; overflow: hidden; padding-block: clamp(3rem, 7vw, 5.5rem) clamp(3.5rem, 8vw, 6rem); }
+  .hero__bg {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(60% 55% at 78% 18%, rgba(108, 74, 160, 0.35), transparent 70%),
+      radial-gradient(45% 40% at 5% 90%, rgba(74, 50, 112, 0.28), transparent 70%),
+      var(--ink);
+  }
+  .hero__bg::after { /* faint yard-line hashes */
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 64px);
+    mask-image: linear-gradient(to bottom, transparent, #000 40%, #000 90%, transparent);
+  }
+
+  .hero__grid {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2rem, 5vw, 4rem); align-items: center;
+  }
+
+  .hero__name {
+    font-family: var(--display); font-weight: 900;
+    font-size: clamp(3.6rem, 12vw, 8rem);
+    line-height: 0.82; letter-spacing: 0.005em; text-transform: uppercase;
+    margin-top: 1.1rem;
+  }
+  .hero__name span { display: block; }
+  .hero__last { color: transparent; -webkit-text-stroke: 2px var(--purple-hi); }
+
+  .hero__meta {
+    font-family: var(--display); font-weight: 600;
+    font-size: clamp(0.95rem, 2vw, 1.15rem); letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--muted); margin-top: 1.4rem;
+  }
+
+  .hero__cta { display: flex; gap: 0.9rem; margin-top: 2rem; flex-wrap: wrap; }
+
+  /* Stat rail — the signature */
+  .rail {
+    display: flex; margin-top: 2.6rem;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .rail__item {
+    flex: 1; padding: 1.2rem 0.5rem 1.1rem;
+    position: relative; text-align: left;
+  }
+  .rail__item + .rail__item::before {
+    content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+    width: 2px; height: 42px; background: var(--gold); opacity: 0.85;
+  }
+  .rail__value {
+    display: block;
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(1.8rem, 4.5vw, 2.9rem); line-height: 1;
+    color: var(--bone); font-variant-numeric: tabular-nums;
+  }
+  .rail__label {
+    display: block; margin-top: 0.5rem;
+    font-family: var(--display); font-weight: 600;
+    font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* Photo */
+  .hero__photo { position: relative; }
+  .hero__photo-inner { aspect-ratio: 4 / 5; border-radius: var(--radius); }
+  .hero__jersey {
+    position: absolute; right: -0.3rem; bottom: -1.6rem; z-index: -1;
+    font-family: var(--display); font-weight: 900;
+    font-size: 9rem; line-height: 1;
+    color: transparent; -webkit-text-stroke: 2px var(--line);
+    pointer-events: none; user-select: none;
+  }
+
+  @media (max-width: 860px) {
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__photo { order: -1; max-width: 320px; }
+    .hero__jersey { display: none; }
+  }
+  @media (max-width: 460px) {
+    .rail { flex-wrap: wrap; }
+    .rail__item { flex: 1 1 45%; }
+    .rail__item:nth-child(3)::before, .rail__item:nth-child(odd)::before { display: none; }
+  }
+</style>

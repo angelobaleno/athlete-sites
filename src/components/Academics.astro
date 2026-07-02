@@ -1,0 +1,70 @@
+---
+import { academics } from '../data/site';
+---
+
+<section class="section" id="academics">
+  <div class="wrap acad">
+    <div class="acad__head">
+      <p class="eyebrow reveal">Off the Field</p>
+      <h2 class="section-title reveal">Academics</h2>
+      <p class="acad__blurb reveal">
+        A student first. Strong classroom performance to match the tape.
+      </p>
+    </div>
+
+    <div class="acad__body">
+      <div class="gpa reveal">
+        <span class="gpa__value">{academics.gpa}</span>
+        <span class="gpa__scale">GPA · {academics.scale}</span>
+      </div>
+
+      <div class="acad__rows">
+        <div class="acad__row reveal">
+          <span class="acad__k">Test Scores</span>
+          <span class={`acad__v ${academics.testScore.placeholder ? 'is-ph' : ''}`}>{academics.testScore.value}</span>
+        </div>
+        <div class="acad__row reveal">
+          <span class="acad__k">Intended Major</span>
+          <span class={`acad__v ${academics.major.placeholder ? 'is-ph' : ''}`}>{academics.major.value}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .acad { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .acad__blurb { color: var(--muted); margin-top: 1.2rem; max-width: 34ch; }
+
+  .acad__body { display: flex; align-items: center; gap: clamp(1.5rem, 4vw, 3rem); flex-wrap: wrap; }
+  .gpa {
+    display: grid; place-items: center; text-align: center;
+    background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2.2rem 2.6rem; position: relative; overflow: hidden;
+  }
+  .gpa::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--gold); }
+  .gpa__value {
+    font-family: var(--display); font-weight: 900; font-size: clamp(4rem, 11vw, 6.5rem);
+    line-height: 0.9; color: var(--gold); font-variant-numeric: tabular-nums;
+  }
+  .gpa__scale {
+    font-family: var(--display); font-weight: 600; font-size: 0.85rem;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 0.6rem;
+  }
+
+  .acad__rows { flex: 1; min-width: 220px; display: grid; gap: 0.9rem; }
+  .acad__row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    padding-bottom: 0.9rem; border-bottom: 1px solid var(--line);
+  }
+  .acad__k {
+    font-family: var(--display); font-weight: 600; font-size: 0.85rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .acad__v { font-weight: 500; color: var(--bone); text-align: right; }
+  .acad__v.is-ph { color: var(--faint); font-style: italic; }
+
+  @media (max-width: 760px) {
+    .acad { grid-template-columns: 1fr; }
+  }
+</style>

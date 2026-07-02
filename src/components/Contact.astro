@@ -1,0 +1,68 @@
+---
+import { contact, player } from '../data/site';
+---
+
+<section class="section section--alt" id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Get in Touch</p>
+    <h2 class="section-title reveal">Contact &amp; Recruiting</h2>
+
+    <div class="cards">
+      <div class="card reveal">
+        <span class="card__tag">Athlete</span>
+        <p class="card__name">{contact.athlete.name}</p>
+        <p class="card__role">{player.position} · Class of {player.gradYear}</p>
+        <ul class="card__list">
+          <li><span>Phone</span><a href={`tel:${contact.athlete.phone.replace(/-/g, '')}`}>{contact.athlete.phone}</a></li>
+          <li><span>X / Twitter</span><a href={contact.athlete.twitterUrl} target="_blank" rel="noopener">{contact.athlete.twitter}</a></li>
+          <li><span>Hudl</span><a href={contact.hudl} target="_blank" rel="noopener">View profile</a></li>
+        </ul>
+      </div>
+
+      <div class={`card reveal ${contact.coach.placeholder ? 'card--ph' : ''}`}>
+        <span class="card__tag">Coach Reference</span>
+        <p class="card__name">{contact.coach.name}</p>
+        <p class="card__role">{contact.coach.title}</p>
+        <ul class="card__list">
+          <li><span>Contact</span><span class={contact.coach.placeholder ? 'is-ph' : ''}>{contact.coach.contact}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cards {
+    margin-top: 2.5rem; display: grid; gap: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .card {
+    background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.8rem; position: relative; overflow: hidden;
+  }
+  .card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--purple); }
+  .card--ph::before { background: var(--faint); }
+
+  .card__tag {
+    font-family: var(--display); font-weight: 700; font-size: 0.72rem;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+  }
+  .card__name {
+    font-family: var(--display); font-weight: 800; font-size: 1.6rem;
+    text-transform: uppercase; letter-spacing: 0.02em; margin-top: 0.7rem;
+  }
+  .card__role { color: var(--muted); font-size: 0.92rem; margin-top: 0.2rem; }
+
+  .card__list { list-style: none; padding: 0; margin-top: 1.4rem; display: grid; gap: 0.85rem; }
+  .card__list li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+    border-top: 1px solid var(--line); padding-top: 0.85rem;
+  }
+  .card__list span:first-child {
+    font-family: var(--display); font-weight: 600; font-size: 0.8rem;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .card__list a { color: var(--purple-hi); font-weight: 500; }
+  .card__list a:hover { color: var(--bone); }
+  .card__list .is-ph { color: var(--faint); font-style: italic; }
+</style>

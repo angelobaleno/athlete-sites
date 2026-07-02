@@ -1,0 +1,27 @@
+---
+import { player } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span class="foot__name">{player.first} {player.last}<span class="foot__dot">.</span></span>
+    <span class="foot__meta">{player.position} · {player.team} · Class of {player.gradYear}</span>
+    <span class="foot__copy">© {year}</span>
+  </div>
+</footer>
+
+<style>
+  .foot { border-top: 1px solid var(--line); padding-block: 2rem; }
+  .foot__inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .foot__name {
+    font-family: var(--display); font-weight: 800; font-size: 1.1rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .foot__dot { color: var(--gold); }
+  .foot__meta { color: var(--muted); font-size: 0.85rem; }
+  .foot__copy { color: var(--faint); font-size: 0.85rem; }
+</style>

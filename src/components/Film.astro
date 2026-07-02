@@ -1,0 +1,75 @@
+---
+import { film } from '../data/site';
+---
+
+<section class="section" id="film">
+  <div class="wrap">
+    <p class="eyebrow reveal">The Tape</p>
+    <h2 class="section-title reveal">Watch the Film</h2>
+
+    <a class="film reveal" href={film.hudlWatch} target="_blank" rel="noopener" aria-label="Watch highlights on Hudl">
+      <div class="film__play" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </div>
+      <div class="film__meta">
+        <span class="film__title">{film.title}</span>
+        <span class="film__host">Full reel on Hudl →</span>
+      </div>
+    </a>
+
+    <p class="film__links reveal">
+      <a href={film.hudlWatch} target="_blank" rel="noopener">hudl.com/v/2T3jkn</a>
+      <span aria-hidden="true">·</span>
+      <a href={film.hudlProfile} target="_blank" rel="noopener">Full Hudl profile</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  .film {
+    position: relative; display: block;
+    margin-top: 2.5rem; aspect-ratio: 16 / 9; max-height: 560px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background:
+      radial-gradient(70% 90% at 50% 40%, rgba(108,74,160,0.30), transparent 70%),
+      var(--ink-3);
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .film::after { /* yard-line texture */
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.035) 0 1px, transparent 1px 56px);
+    pointer-events: none;
+  }
+  .film:hover { border-color: var(--purple-hi); transform: translateY(-3px); }
+
+  .film__play {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -60%);
+    width: 84px; height: 84px; border-radius: 50%;
+    background: var(--gold); color: var(--ink);
+    display: grid; place-content: center;
+    box-shadow: 0 12px 40px rgba(242, 168, 29, 0.35);
+    transition: transform 0.2s ease;
+  }
+  .film:hover .film__play { transform: translate(-50%, -60%) scale(1.06); }
+  .film__play svg { margin-left: 4px; }
+
+  .film__meta {
+    position: absolute; left: 0; bottom: 0; right: 0;
+    padding: 1.5rem clamp(1.25rem, 3vw, 2rem);
+    background: linear-gradient(to top, rgba(14,14,16,0.92), transparent);
+    display: flex; flex-direction: column; gap: 0.2rem;
+  }
+  .film__title {
+    font-family: var(--display); font-weight: 800; font-size: clamp(1.3rem, 3vw, 1.9rem);
+    text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .film__host { color: var(--gold); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.04em; }
+
+  .film__links {
+    margin-top: 1.4rem; color: var(--muted);
+    font-size: 0.92rem; display: flex; gap: 0.7rem; flex-wrap: wrap;
+  }
+  .film__links a { color: var(--purple-hi); }
+  .film__links a:hover { color: var(--bone); }
+</style>
