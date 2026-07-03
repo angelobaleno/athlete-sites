@@ -2,3 +2,12 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+
+# Environment / secrets — never commit
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Subagent-driven-development scratch
+.superpowers/
