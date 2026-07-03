@@ -1,0 +1,26 @@
+---
+import Admin from '../layouts/Admin.astro';
+import LoginForm from '../components/admin/LoginForm.tsx';
+export const prerender = false;
+---
+<Admin title="Sign in">
+  <h1>Athlete Login</h1>
+  <p>Sign in to manage your recruiting page.</p>
+  <LoginForm client:load />
+  <style>
+    h1 { font-family: var(--display); }
+    .login-form { display: grid; gap: 1rem; max-width: 360px; margin-top: 1.5rem; }
+    .login-form label { display: grid; gap: 0.35rem; font-size: 0.85rem; letter-spacing: 0.02em; }
+    .login-form input {
+      padding: 0.6rem 0.7rem; border-radius: var(--radius); border: 1px solid var(--line);
+      background: var(--ink-3); color: inherit; font-size: 1rem;
+    }
+    .login-form button {
+      padding: 0.7rem; border: 0; border-radius: var(--radius); font-weight: 600; cursor: pointer;
+      background: var(--gold); color: var(--ink);
+    }
+    .login-form button:hover { background: var(--gold-hi); }
+    .login-form button:disabled { opacity: 0.6; cursor: default; }
+    .login-error { color: #ef6b6b; font-size: 0.85rem; margin: 0; }
+  </style>
+</Admin>
