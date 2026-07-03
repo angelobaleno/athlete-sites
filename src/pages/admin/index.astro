@@ -1,0 +1,27 @@
+---
+import Admin from '../../layouts/Admin.astro';
+import LogoutButton from '../../components/admin/LogoutButton.tsx';
+export const prerender = false;
+
+// Middleware guarantees a user here, but guard defensively.
+const user = Astro.locals.user;
+if (!user) return Astro.redirect('/login');
+---
+<Admin title="Dashboard">
+  <header class="admin-header">
+    <div>
+      <h1>Your Dashboard</h1>
+      <p class="signed-in">Signed in as {user.email}</p>
+    </div>
+    <LogoutButton client:load />
+  </header>
+  <p class="coming-soon">Content editors are coming next. For now you can sign in and out.</p>
+  <p><a href="/" class="view-site">View my public site →</a></p>
+  <style>
+    .admin-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+    h1 { font-family: var(--display); }
+    .signed-in { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0 0; }
+    .coming-soon { color: var(--muted); margin-top: 2rem; }
+    .view-site { color: var(--gold); }
+  </style>
+</Admin>
