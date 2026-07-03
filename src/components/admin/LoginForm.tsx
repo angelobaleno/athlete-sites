@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks';
+import './LoginForm.css';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -27,11 +28,11 @@ export default function LoginForm() {
   return (
     <form onSubmit={onSubmit} class="login-form">
       <label>Email
-        <input type="email" value={email} required
+        <input type="email" value={email} required autocomplete="email"
           onInput={(e) => setEmail((e.target as HTMLInputElement).value)} />
       </label>
       <label>Password
-        <input type="password" value={password} required
+        <input type="password" value={password} required autocomplete="current-password"
           onInput={(e) => setPassword((e.target as HTMLInputElement).value)} />
       </label>
       {error && <p class="login-error" role="alert">{error}</p>}
