@@ -34,7 +34,7 @@ import { contact, player } from '../data/site';
 <style>
   .cards {
     margin-top: 2.5rem; display: grid; gap: 1.1rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   }
   .card {
     background: var(--ink-3); border: 1px solid var(--line); border-radius: var(--radius);

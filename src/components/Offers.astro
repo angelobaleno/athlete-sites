@@ -32,7 +32,7 @@ const asset = (p: string) => `${base}/${p}`.replace(/\/{2,}/g, '/');
 <style>
   .offers {
     margin-top: 2.5rem; display: grid; gap: 1.1rem;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
   }
   .offer {
     display: flex; align-items: center; gap: 1.6rem;
@@ -63,4 +63,11 @@ const asset = (p: string) => `${base}/${p}`.replace(/\/{2,}/g, '/');
   }
   .offer__level { color: var(--bone); font-weight: 500; margin-top: 0.6rem; }
   .offer__loc { color: var(--muted); font-size: 0.9rem; margin-top: 0.15rem; }
+
+  /* Narrow phones: give the school name room next to the logo. */
+  @media (max-width: 480px) {
+    .offer { gap: 1.1rem; padding: 1.4rem; }
+    .offer__logo, .offer__mark { width: 72px; height: 72px; }
+    .offer__mark { font-size: 1.6rem; }
+  }
 </style>

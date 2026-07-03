@@ -26,7 +26,7 @@
   --body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Layout */
-  --wrap: 1120px;
+  --wrap: 1280px;
   --gutter: clamp(1.25rem, 4vw, 3rem);
   --radius: 4px;
 }
