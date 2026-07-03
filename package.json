@@ -11,10 +11,13 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@astrojs/preact": "^6.0.1",
     "@astrojs/vercel": "^7.8.2",
+    "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.110.0",
     "astro": "^4.15.0",
-    "pg": "^8.22.0"
+    "pg": "^8.22.0",
+    "preact": "^10.29.4"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.0",
