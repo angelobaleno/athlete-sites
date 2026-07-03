@@ -1,5 +1,7 @@
 ---
-import { schedule, scheduleMeta } from '../data/site';
+import type { Game, AthleteProfile } from '../lib/types';
+interface Props { schedule: Game[]; scheduleMeta: AthleteProfile['scheduleMeta']; }
+const { schedule, scheduleMeta } = Astro.props as Props;
 ---
 
 <section class="section section--alt" id="schedule">

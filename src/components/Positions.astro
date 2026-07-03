@@ -1,5 +1,7 @@
 ---
-import { positions } from '../data/site';
+import type { AthleteProfile } from '../lib/types';
+interface Props { positions: AthleteProfile['positions']; }
+const { positions } = Astro.props as Props;
 ---
 
 <section class="section" id="positions">

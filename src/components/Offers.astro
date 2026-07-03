@@ -1,5 +1,7 @@
 ---
-import { offers } from '../data/site';
+import type { Offer } from '../lib/types';
+interface Props { offers: Offer[]; }
+const { offers } = Astro.props as Props;
 const base = import.meta.env.BASE_URL;
 const asset = (p: string) => `${base}/${p}`.replace(/\/{2,}/g, '/');
 ---
@@ -12,8 +14,8 @@ const asset = (p: string) => `${base}/${p}`.replace(/\/{2,}/g, '/');
     <div class="offers">
       {offers.map((o) => (
         <div class="offer reveal">
-          {o.logo ? (
-            <div class="offer__logo"><img src={asset(o.logo)} alt={`${o.school} logo`} loading="lazy" /></div>
+          {o.logoUrl ? (
+            <div class="offer__logo"><img src={asset(o.logoUrl)} alt={`${o.school} logo`} loading="lazy" /></div>
           ) : (
             <div class="offer__mark" aria-hidden="true">{o.short}</div>
           )}

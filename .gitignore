@@ -11,3 +11,6 @@ dist/
 
 # Subagent-driven-development scratch
 .superpowers/
+
+# Build output
+.vercel/

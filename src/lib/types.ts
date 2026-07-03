@@ -35,6 +35,9 @@ export interface AthleteProfile {
   };
 }
 
+/** The identity fields plus the resolved photo URL, as passed to components. */
+export type PlayerView = AthleteProfile['identity'] & { heroPhoto: string | null };
+
 export interface CardVisibility {
   film: boolean; offers: boolean; athletics: boolean; positions: boolean;
   academics: boolean; schedule: boolean; contact: boolean;

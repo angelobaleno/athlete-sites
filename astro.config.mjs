@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless';
 
-// Deployed to GitHub Pages as a project site (served under /tyler-baleno-site/),
-// same setup as Brian's and Webb's sites. If Tyler ever gets his own domain,
-// set `site` to that domain and drop `base`.
+// Server-rendered on Vercel: pages fetch the athlete's data from Supabase at
+// request time, so admin edits show up live. (Was static on GitHub Pages.)
 export default defineConfig({
-  site: 'https://angelobaleno.github.io',
-  base: '/tyler-baleno-site',
+  output: 'server',
+  adapter: vercel(),
 });

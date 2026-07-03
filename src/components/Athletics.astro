@@ -1,5 +1,7 @@
 ---
-import { measurables, honors } from '../data/site';
+import type { Stat } from '../lib/types';
+interface Props { measurables: Stat[]; honors: string[]; }
+const { measurables, honors } = Astro.props as Props;
 ---
 
 <section class="section section--alt" id="athletics">

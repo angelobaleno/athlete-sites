@@ -10,20 +10,31 @@ import Academics from '../components/Academics.astro';
 import Schedule from '../components/Schedule.astro';
 import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
+import { getAthleteBySlug, resolveOffers } from '../lib/athlete';
+
+export const prerender = false;
+
+const rec = await getAthleteBySlug('tyler-baleno');
+if (!rec) return new Response('Athlete not found', { status: 404 });
+
+const { profile, cardVisibility, photoUrl } = rec;
+// Reconstruct the `player` shape the components already expect.
+const player = { ...profile.identity, heroPhoto: photoUrl };
+const offers = await resolveOffers(profile.offers);
 ---
 
-<Base>
-  <Nav />
+<Base player={player}>
+  <Nav player={player} />
   <main>
-    <Hero />
+    <Hero player={player} headline={profile.headline} />
     <div class="yardline" aria-hidden="true"></div>
-    <Film />
-    <Offers />
-    <Athletics />
-    <Positions />
-    <Academics />
-    <Schedule />
-    <Contact />
+    {cardVisibility.film && <Film film={profile.film} />}
+    {cardVisibility.offers && <Offers offers={offers} />}
+    {cardVisibility.athletics && <Athletics measurables={profile.measurables} honors={profile.honors} />}
+    {cardVisibility.positions && <Positions positions={profile.positions} />}
+    {cardVisibility.academics && <Academics academics={profile.academics} />}
+    {cardVisibility.schedule && <Schedule schedule={profile.schedule} scheduleMeta={profile.scheduleMeta} />}
+    {cardVisibility.contact && <Contact contact={profile.contact} player={player} />}
   </main>
-  <Footer />
+  <Footer player={player} />
 </Base>
