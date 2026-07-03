@@ -10,8 +10,10 @@ function parseCookieHeader(header: string | null): { name: string; value: string
   if (!header) return [];
   return header.split(';').map((pair) => {
     const idx = pair.indexOf('=');
-    const name = pair.slice(0, idx).trim();
-    const value = decodeURIComponent(pair.slice(idx + 1).trim());
+    const name = idx === -1 ? '' : pair.slice(0, idx).trim();
+    const raw = idx === -1 ? '' : pair.slice(idx + 1).trim();
+    let value = raw;
+    try { value = decodeURIComponent(raw); } catch { value = raw; }
     return { name, value };
   }).filter((c) => c.name);
 }
