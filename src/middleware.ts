@@ -5,7 +5,12 @@ import { redirectTarget } from './lib/auth-guard';
 export const onRequest = defineMiddleware(async (context, next) => {
   const supabase = createServerSupabase(context);
   // getUser() validates the token with Supabase (safe for auth decisions).
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    ({ data: { user } } = await supabase.auth.getUser());
+  } catch {
+    user = null;
+  }
 
   context.locals.supabase = supabase;
   context.locals.user = user;

@@ -30,7 +30,7 @@ export function createServerSupabase(ctx: { request: Request; cookies: AstroCook
       getAll: () => parseCookieHeader(ctx.request.headers.get('cookie')),
       setAll: (cookiesToSet: { name: string; value: string; options: CookieOptions }[]) => {
         for (const { name, value, options } of cookiesToSet) {
-          ctx.cookies.set(name, value, { ...options, path: '/' });
+          ctx.cookies.set(name, value, { ...options, path: '/', httpOnly: true, secure: import.meta.env.PROD });
         }
       },
     },
