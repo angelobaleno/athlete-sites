@@ -39,9 +39,15 @@ export async function resolveOffers(offers: Offer[]): Promise<Offer[]> {
   return offers.map((o) => {
     if (o.schoolId && byId.has(o.schoolId)) {
       const s = byId.get(o.schoolId)!;
+      // School-table values are defaults; any explicit field on the offer wins,
+      // so a picked school can keep a custom level label or a hand-made logo.
       return {
-        schoolId: o.schoolId, school: s.name, short: s.short, level: s.level,
-        location: s.location ?? undefined, logoUrl: s.logoUrl ?? undefined,
+        schoolId: o.schoolId,
+        school: o.school ?? s.name,
+        short: o.short ?? s.short,
+        level: o.level ?? s.level,
+        location: o.location ?? s.location ?? undefined,
+        logoUrl: o.logoUrl ?? s.logoUrl ?? undefined,
       };
     }
     return o; // manual fallback passes through

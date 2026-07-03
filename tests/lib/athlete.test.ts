@@ -22,6 +22,8 @@ describe('resolveOffers', () => {
     const rec = await getAthleteBySlug('tyler-baleno');
     const resolved = await resolveOffers(rec!.profile.offers);
     expect(resolved[0].school).toMatch(/robert morris/i);
-    expect(resolved[0].level).toBeTruthy();
+    // Explicit offer fields must override the school-table defaults (parity).
+    expect(resolved[0].level).toBe('NCAA Division I · FCS');
+    expect(resolved[0].logoUrl).toBe('images/logos/rmu.svg');
   });
 });

@@ -52,9 +52,11 @@ const profile = {
     major: { value: 'To be determined', placeholder: true },
   },
   offers: [
+    // Pick RMU from the schools table but keep the hand-tuned level label and
+    // local logo (explicit fields override the school-table defaults).
     rmuId
-      ? { schoolId: rmuId }
-      : { school: 'Robert Morris University', short: 'RMU', level: 'NCAA Division I · FCS', location: 'Moon Township, PA' },
+      ? { schoolId: rmuId, level: 'NCAA Division I · FCS', logoUrl: 'images/logos/rmu.svg' }
+      : { school: 'Robert Morris University', short: 'RMU', level: 'NCAA Division I · FCS', location: 'Moon Township, PA', logoUrl: 'images/logos/rmu.svg' },
   ],
   scheduleMeta: { season: '2026 · Senior Season', kickoff: '7:00 PM', homeVenue: 'Plum HS · 900 Elicker Rd, Pittsburgh' },
   schedule: [
