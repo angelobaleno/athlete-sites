@@ -1,39 +1,33 @@
 ---
-import Base from '../themes/tyler/Base.astro';
-import Nav from '../themes/tyler/Nav.astro';
-import Hero from '../themes/tyler/Hero.astro';
-import Film from '../themes/tyler/Film.astro';
-import Offers from '../themes/tyler/Offers.astro';
-import Athletics from '../themes/tyler/Athletics.astro';
-import Positions from '../themes/tyler/Positions.astro';
-import Academics from '../themes/tyler/Academics.astro';
-import Schedule from '../themes/tyler/Schedule.astro';
-import Contact from '../themes/tyler/Contact.astro';
-import Footer from '../themes/tyler/Footer.astro';
 import { getAthleteBySlug, resolveOffers } from '../lib/athlete';
+import { getSiteConfig } from '../lib/site-config';
+import { buildPanelList, PANEL_COMPONENT } from '../lib/panels';
+import { getTheme } from '../themes/registry';
 
 export const prerender = false;
 
-const rec = await getAthleteBySlug('tyler-baleno');
+const slug = 'tyler-baleno';
+const rec = await getAthleteBySlug(slug);
 if (!rec) return new Response('Athlete not found', { status: 404 });
 
 const { profile, cardVisibility, photoUrl } = rec;
-// Reconstruct the `player` shape the components already expect.
 const player = { ...profile.identity, heroPhoto: photoUrl };
 const offers = await resolveOffers(profile.offers);
+
+const { theme, arrangement } = getSiteConfig(slug);
+const t = getTheme(theme);
+const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
+
+const { Base, Nav, Footer } = t;
 ---
 
 <Base player={player}>
   <Nav player={player} />
   <main>
-    <Hero player={player} headline={profile.headline} />
-    {cardVisibility.film && <Film film={profile.film} />}
-    {cardVisibility.offers && <Offers offers={offers} />}
-    {cardVisibility.athletics && <Athletics measurables={profile.measurables} honors={profile.honors} />}
-    {cardVisibility.positions && <Positions positions={profile.positions} />}
-    {cardVisibility.academics && <Academics academics={profile.academics} />}
-    {cardVisibility.schedule && <Schedule schedule={profile.schedule} scheduleMeta={profile.scheduleMeta} />}
-    {cardVisibility.contact && <Contact contact={profile.contact} player={player} />}
+    {panels.map((p) => {
+      const Panel = t[PANEL_COMPONENT[p.key] as keyof typeof t];
+      return <Panel {...p.props} />;
+    })}
   </main>
   <Footer player={player} />
 </Base>
