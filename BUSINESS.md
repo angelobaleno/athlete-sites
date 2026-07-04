@@ -1,8 +1,8 @@
-# Recruit Sites — Business & Hosting
+# Athlete Sites — Business & Hosting
 
 **Date:** 2026-07-03
 **Owner:** Angelo
-**Scope:** How the recruit-site service is hosted, run, and sold. Product/design decisions live in `DESIGN.md` and the specs under `docs/`; this file is the money-and-hosting side, kept in one place.
+**Scope:** How the Athlete Sites service is hosted, run, and sold. (Athlete Sites is the umbrella platform + shared Supabase backend; each athlete — Tyler first — is one site/record in it.) Product/design decisions live in `DESIGN.md` and the specs under `docs/`; this file is the money-and-hosting side, kept in one place.
 
 ---
 
