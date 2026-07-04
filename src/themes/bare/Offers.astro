@@ -1,7 +1,7 @@
 ---
 import type { Offer } from '../../lib/types';
 interface Props { offers: Offer[]; }
-const { offers } = Astro.props as Props;
+const { offers } = Astro.props;
 ---
 {offers.length > 0 && (
   <section>

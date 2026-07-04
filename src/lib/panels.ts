@@ -1,5 +1,6 @@
 import type { AthleteProfile, PlayerView, Offer, CardVisibility } from './types';
 import type { PanelKey } from './site-config';
+import type { ThemeComponents } from '../themes/types';
 
 export interface RenderContext {
   player: PlayerView;
@@ -13,7 +14,7 @@ export interface PanelSpec {
 }
 
 /** Panel key -> the field name in a theme's ThemeComponents. */
-export const PANEL_COMPONENT: Record<PanelKey, string> = {
+export const PANEL_COMPONENT: Record<PanelKey, keyof ThemeComponents> = {
   hero: 'Hero', film: 'Film', offers: 'Offers', athletics: 'Athletics',
   positions: 'Positions', academics: 'Academics', schedule: 'Schedule', contact: 'Contact',
 };

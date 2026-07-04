@@ -1,7 +1,7 @@
 ---
-import type { Game } from '../../lib/types';
-interface Props { schedule: Game[]; scheduleMeta: { season: string; kickoff: string; homeVenue: string; }; }
-const { schedule, scheduleMeta } = Astro.props as Props;
+import type { Game, AthleteProfile } from '../../lib/types';
+interface Props { schedule: Game[]; scheduleMeta: AthleteProfile['scheduleMeta']; }
+const { schedule, scheduleMeta } = Astro.props;
 ---
 {schedule.length > 0 && (
   <section>

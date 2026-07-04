@@ -1,0 +1,28 @@
+---
+// Engine render shell: given a resolved theme + ordered panel list, renders the
+// theme's chrome (Nav/Footer) around each panel component. No visual styling of
+// its own — the theme owns all look. Shared by the homepage and the preview route.
+import type { ThemeComponents } from '../themes/types';
+import type { PanelSpec } from '../lib/panels';
+import { PANEL_COMPONENT } from '../lib/panels';
+import type { PlayerView } from '../lib/types';
+
+interface Props {
+  theme: ThemeComponents;
+  panels: PanelSpec[];
+  player: PlayerView;
+}
+const { theme, panels, player } = Astro.props;
+const { Base, Nav, Footer } = theme;
+---
+
+<Base player={player}>
+  <Nav player={player} />
+  <main>
+    {panels.map((p) => {
+      const Panel = theme[PANEL_COMPONENT[p.key]];
+      return <Panel {...p.props} />;
+    })}
+  </main>
+  <Footer player={player} />
+</Base>

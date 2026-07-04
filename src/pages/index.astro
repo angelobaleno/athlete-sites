@@ -1,8 +1,9 @@
 ---
 import { getAthleteBySlug, resolveOffers } from '../lib/athlete';
 import { getSiteConfig } from '../lib/site-config';
-import { buildPanelList, PANEL_COMPONENT } from '../lib/panels';
+import { buildPanelList } from '../lib/panels';
 import { getTheme } from '../themes/registry';
+import ThemeRender from '../components/ThemeRender.astro';
 
 export const prerender = false;
 
@@ -17,17 +18,6 @@ const offers = await resolveOffers(profile.offers);
 const { theme, arrangement } = getSiteConfig(slug);
 const t = getTheme(theme);
 const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
-
-const { Base, Nav, Footer } = t;
 ---
 
-<Base player={player}>
-  <Nav player={player} />
-  <main>
-    {panels.map((p) => {
-      const Panel = t[PANEL_COMPONENT[p.key] as keyof typeof t];
-      return <Panel {...p.props} />;
-    })}
-  </main>
-  <Footer player={player} />
-</Base>
+<ThemeRender theme={t} panels={panels} player={player} />

@@ -1,4 +1,6 @@
 ---
+import type { AthleteProfile } from '../../lib/types';
+interface Props { academics: AthleteProfile['academics']; }
 const { academics } = Astro.props;
 ---
 <section>

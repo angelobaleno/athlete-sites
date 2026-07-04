@@ -1,6 +1,7 @@
 ---
-interface Props { contact: { athlete: { phone: string; twitter: string; twitterUrl: string; }; hudl: string; }; }
-const { contact } = Astro.props as Props;
+import type { AthleteProfile } from '../../lib/types';
+interface Props { contact: AthleteProfile['contact']; }
+const { contact } = Astro.props;
 ---
 <section>
   <h2>Contact</h2>

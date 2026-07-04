@@ -1,6 +1,7 @@
 ---
-interface Props { positions: { code: string; name: string; primary: boolean; }[]; }
-const { positions } = Astro.props as Props;
+import type { AthleteProfile } from '../../lib/types';
+interface Props { positions: AthleteProfile['positions']; }
+const { positions } = Astro.props;
 ---
 <section>
   <h2>Positions</h2>

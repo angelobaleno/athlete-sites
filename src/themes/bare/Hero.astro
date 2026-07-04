@@ -1,7 +1,7 @@
 ---
 import type { Stat, PlayerView } from '../../lib/types';
 interface Props { player: PlayerView; headline: Stat[]; }
-const { player, headline } = Astro.props as Props;
+const { player, headline } = Astro.props;
 ---
 <section>
   <h1>{player.first} {player.last}</h1>

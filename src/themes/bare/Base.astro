@@ -1,4 +1,6 @@
 ---
+import type { PlayerView } from '../../lib/types';
+interface Props { player: PlayerView; }
 const { player } = Astro.props;
 const title = `${player.first} ${player.last} — ${player.position}`;
 ---
