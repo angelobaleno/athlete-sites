@@ -1,0 +1,13 @@
+---
+import Admin from '../layouts/Admin.astro';
+import LoginForm from '../components/admin/LoginForm.tsx';
+export const prerender = false;
+---
+<Admin title="Sign in">
+  <h1>Athlete Login</h1>
+  <p>Sign in to manage your recruiting page.</p>
+  <LoginForm client:load />
+  <style>
+    h1 { font-family: var(--display); }
+  </style>
+</Admin>

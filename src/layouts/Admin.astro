@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; }
+const { title = 'Admin' } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{title} · Tyler Baleno</title>
+  </head>
+  <body class="admin-body">
+    <main class="admin-main">
+      <slot />
+    </main>
+    <style>
+      .admin-body { min-height: 100dvh; background: var(--ink); color: var(--bone); margin: 0; }
+      .admin-main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem; }
+    </style>
+  </body>
+</html>
