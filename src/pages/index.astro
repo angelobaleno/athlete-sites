@@ -1,15 +1,15 @@
 ---
-import Base from '../layouts/Base.astro';
-import Nav from '../components/Nav.astro';
-import Hero from '../components/Hero.astro';
-import Film from '../components/Film.astro';
-import Offers from '../components/Offers.astro';
-import Athletics from '../components/Athletics.astro';
-import Positions from '../components/Positions.astro';
-import Academics from '../components/Academics.astro';
-import Schedule from '../components/Schedule.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import Base from '../themes/tyler/Base.astro';
+import Nav from '../themes/tyler/Nav.astro';
+import Hero from '../themes/tyler/Hero.astro';
+import Film from '../themes/tyler/Film.astro';
+import Offers from '../themes/tyler/Offers.astro';
+import Athletics from '../themes/tyler/Athletics.astro';
+import Positions from '../themes/tyler/Positions.astro';
+import Academics from '../themes/tyler/Academics.astro';
+import Schedule from '../themes/tyler/Schedule.astro';
+import Contact from '../themes/tyler/Contact.astro';
+import Footer from '../themes/tyler/Footer.astro';
 import { getAthleteBySlug, resolveOffers } from '../lib/athlete';
 
 export const prerender = false;
@@ -27,7 +27,6 @@ const offers = await resolveOffers(profile.offers);
   <Nav player={player} />
   <main>
     <Hero player={player} headline={profile.headline} />
-    <div class="yardline" aria-hidden="true"></div>
     {cardVisibility.film && <Film film={profile.film} />}
     {cardVisibility.offers && <Offers offers={offers} />}
     {cardVisibility.athletics && <Athletics measurables={profile.measurables} honors={profile.honors} />}
