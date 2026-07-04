@@ -50,7 +50,7 @@ Every component must be authored — even if its body is minimal. See `src/lib/p
 
 Keep all styles (CSS, Tailwind, or plain style tags) inside the theme folder. Import nothing from another theme — each theme is self-contained.
 
-Example for a minimal `Hero.astro`:
+Example for a minimal `Hero.astro`. Note `headline` is a `Stat[]` (an array of `{ label, value }`), so map over it rather than rendering it directly:
 
 ```astro
 ---
@@ -60,7 +60,7 @@ const { player, headline } = Astro.props;
 <section style="padding: 3rem; text-align: center;">
   <h1>{player.first} {player.last}</h1>
   <p>{player.position}</p>
-  {headline && <p>{headline}</p>}
+  <dl>{headline.map((s) => (<><dt>{s.label}</dt><dd>{s.value}</dd></>))}</dl>
 </section>
 ```
 
@@ -118,7 +118,7 @@ Start the dev server and preview your theme against real athlete data:
 npm run dev
 ```
 
-Visit `http://localhost:3000/preview/<name>` in your browser. This page renders your theme with Tyler's actual data, so you see real content flowing through your components.
+Visit `http://localhost:4321/preview/<name>` in your browser. This page renders your theme with Tyler's actual data, so you see real content flowing through your components.
 
 Use browser DevTools (Inspector, responsive mode, etc.) to dial in exact spacing, colors, typography, and motion. When you find a value that works, commit it to the component's CSS.
 
@@ -156,7 +156,7 @@ Build the production site and view the athlete's live page:
 npm run build
 ```
 
-Open the athlete's site (e.g., `http://localhost:3000/<athlete-slug>` after serving the built files) to confirm the theme renders correctly with their real content and no console errors.
+Open the athlete's site (e.g., `http://localhost:4321/<athlete-slug>` after serving the built files) to confirm the theme renders correctly with their real content and no console errors.
 
 ---
 
