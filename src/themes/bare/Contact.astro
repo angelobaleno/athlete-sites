@@ -1,0 +1,12 @@
+---
+interface Props { contact: { athlete: { phone: string; twitter: string; twitterUrl: string; }; hudl: string; }; }
+const { contact } = Astro.props as Props;
+---
+<section>
+  <h2>Contact</h2>
+  <dl>
+    {contact.athlete.phone && (<><dt>Phone</dt><dd>{contact.athlete.phone}</dd></>)}
+    {contact.athlete.twitter && (<><dt>X</dt><dd><a href={contact.athlete.twitterUrl}>{contact.athlete.twitter}</a></dd></>)}
+    {contact.hudl && (<><dt>Hudl</dt><dd><a href={contact.hudl}>Profile</a></dd></>)}
+  </dl>
+</section>

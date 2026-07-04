@@ -1,0 +1,11 @@
+---
+import type { Offer } from '../../lib/types';
+interface Props { offers: Offer[]; }
+const { offers } = Astro.props as Props;
+---
+{offers.length > 0 && (
+  <section>
+    <h2>Offers</h2>
+    <ul>{offers.map((o) => (<li>{o.school} {o.level ? `(${o.level})` : ''}</li>))}</ul>
+  </section>
+)}

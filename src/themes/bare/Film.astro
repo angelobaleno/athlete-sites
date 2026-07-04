@@ -1,0 +1,7 @@
+---
+const { film } = Astro.props;
+---
+<section>
+  <h2>Film</h2>
+  <p><a href={film.hudlWatch}>{film.title || 'Watch film'}</a></p>
+</section>

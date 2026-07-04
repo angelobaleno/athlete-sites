@@ -1,0 +1,25 @@
+---
+const { player } = Astro.props;
+const title = `${player.first} ${player.last} — ${player.position}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style>
+      :root { color-scheme: light; }
+      body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif;
+        background: #ffffff; color: #111; line-height: 1.5; }
+      main { max-width: 720px; margin: 0 auto; padding: 24px; }
+      section { padding: 28px 0; border-top: 1px solid #e5e5e5; }
+      h1 { font-size: 2rem; margin: 0; } h2 { font-size: 1.1rem; letter-spacing: .04em;
+        text-transform: uppercase; color: #666; margin: 0 0 12px; }
+      ul { margin: 0; padding-left: 18px; } a { color: #0a58ca; }
+      dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0; }
+      dt { color: #666; } dd { margin: 0; font-weight: 600; }
+    </style>
+  </head>
+  <body><slot /></body>
+</html>

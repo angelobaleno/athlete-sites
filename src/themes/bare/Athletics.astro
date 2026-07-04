@@ -1,0 +1,10 @@
+---
+import type { Stat } from '../../lib/types';
+interface Props { measurables: Stat[]; honors: string[]; }
+const { measurables, honors } = Astro.props as Props;
+---
+<section>
+  <h2>Athletics</h2>
+  <dl>{measurables.map((s) => (<><dt>{s.label}</dt><dd>{s.value}{s.unit ?? ''}</dd></>))}</dl>
+  {honors.length > 0 && <ul>{honors.map((h) => (<li>{h}</li>))}</ul>}
+</section>

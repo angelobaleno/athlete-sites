@@ -1,0 +1,11 @@
+---
+import type { Game } from '../../lib/types';
+interface Props { schedule: Game[]; scheduleMeta: { season: string; kickoff: string; homeVenue: string; }; }
+const { schedule, scheduleMeta } = Astro.props as Props;
+---
+{schedule.length > 0 && (
+  <section>
+    <h2>Schedule — {scheduleMeta.season}</h2>
+    <ul>{schedule.map((g) => (<li>{g.date} — {g.home ? 'vs' : '@'} {g.opp}</li>))}</ul>
+  </section>
+)}

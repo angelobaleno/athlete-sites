@@ -1,0 +1,8 @@
+---
+interface Props { positions: { code: string; name: string; primary: boolean; }[]; }
+const { positions } = Astro.props as Props;
+---
+<section>
+  <h2>Positions</h2>
+  <ul>{positions.map((p) => (<li>{p.name}{p.primary ? ' (primary)' : ''}</li>))}</ul>
+</section>

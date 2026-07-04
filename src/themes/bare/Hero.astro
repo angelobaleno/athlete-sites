@@ -1,0 +1,10 @@
+---
+import type { Stat, PlayerView } from '../../lib/types';
+interface Props { player: PlayerView; headline: Stat[]; }
+const { player, headline } = Astro.props as Props;
+---
+<section>
+  <h1>{player.first} {player.last}</h1>
+  <p>{player.position} · Class of {player.gradYear} · {player.school} ({player.location})</p>
+  <dl>{headline.map((s) => (<><dt>{s.label}</dt><dd>{s.value}</dd></>))}</dl>
+</section>

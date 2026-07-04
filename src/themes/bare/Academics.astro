@@ -1,0 +1,11 @@
+---
+const { academics } = Astro.props;
+---
+<section>
+  <h2>Academics</h2>
+  <dl>
+    <dt>GPA</dt><dd>{academics.gpa} / {academics.scale}</dd>
+    <dt>Test</dt><dd>{academics.testScore.value || 'TBD'}</dd>
+    <dt>Major</dt><dd>{academics.major.value || 'TBD'}</dd>
+  </dl>
+</section>
