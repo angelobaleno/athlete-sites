@@ -1,5 +1,7 @@
 # Tyler Baleno — Recruiting Site (Design Spec)
 
+> **Scope note (2026-07-04):** This file is now **Tyler's athlete record** (his verified data + the original single-site direction), not the platform architecture. Current platform/theming architecture lives in `docs/superpowers/specs/` — see `2026-07-04-theming-architecture-design.md`.
+
 **Date:** 2026-07-02
 **Owner:** Angelo (building for cousin Tyler)
 **Purpose:** A recruiting portfolio site that presents Tyler to college football recruiters — physicals, film, stats, academics, contact. The recruiter is the sole audience; every choice serves "can a coach evaluate him in 60 seconds."
