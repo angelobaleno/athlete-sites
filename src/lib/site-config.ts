@@ -17,7 +17,7 @@ export const DEFAULT_ARRANGEMENT: PanelKey[] = [
 
 /** Repo-side, Angelo-only. Keyed by athlete slug. */
 const siteConfigs: Record<string, SiteConfig> = {
-  'tyler-baleno': { theme: 'tyler', arrangement: DEFAULT_ARRANGEMENT },
+  'tyler-baleno': { theme: 'tyler', arrangement: [...DEFAULT_ARRANGEMENT] },
 };
 
 export function getSiteConfig(slug: string): SiteConfig {
