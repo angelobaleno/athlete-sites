@@ -6,9 +6,28 @@ describe('validateOffers', () => {
   it('rejects a non-array', () => {
     expect('error' in validateOffers({})).toBe(true);
   });
-  it('normalizes a schoolId offer to just {schoolId}, dropping resolved fields', () => {
-    const res = validateOffers([{ schoolId: 'abc', school: 'Robert Morris', level: 'FCS', logoUrl: 'x' }]);
+  it('keeps a bare schoolId offer bare (picker adds stay table-driven)', () => {
+    const res = validateOffers([{ schoolId: 'abc' }]);
     expect(res).toEqual({ offers: [{ schoolId: 'abc' }] });
+  });
+  it('preserves explicit override fields on a schoolId offer (hand-set level/logo survive a save)', () => {
+    const res = validateOffers([{ schoolId: 'abc', level: 'NCAA Division I · FCS', logoUrl: 'images/logos/rmu.svg' }]);
+    expect(res).toEqual({ offers: [{ schoolId: 'abc', level: 'NCAA Division I · FCS', logoUrl: 'images/logos/rmu.svg' }] });
+  });
+  it('drops empty-string fields from a schoolId offer instead of storing them as overrides', () => {
+    const res = validateOffers([{ schoolId: 'abc', school: '', level: '', logoUrl: '' }]);
+    expect(res).toEqual({ offers: [{ schoolId: 'abc' }] });
+  });
+  it('keeps logoUrl on a manual offer', () => {
+    const res = validateOffers([{ school: 'Some Prep', short: 'SP', level: 'D2', location: 'PA', logoUrl: 'images/logos/sp.svg' }]);
+    expect(res).toEqual({ offers: [{ school: 'Some Prep', short: 'SP', level: 'D2', location: 'PA', logoUrl: 'images/logos/sp.svg' }] });
+  });
+  it('rejects a list longer than 50 offers', () => {
+    const many = Array.from({ length: 51 }, (_, i) => ({ schoolId: `id-${i}` }));
+    expect('error' in validateOffers(many)).toBe(true);
+  });
+  it('rejects a field longer than 200 characters', () => {
+    expect('error' in validateOffers([{ school: 'x'.repeat(201) }])).toBe(true);
   });
   it('keeps manual offer fields when there is no schoolId', () => {
     const res = validateOffers([{ school: 'Some Prep', short: 'SP', level: 'D2', location: 'PA' }]);
