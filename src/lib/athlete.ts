@@ -1,4 +1,5 @@
 import { getPublicClient } from './supabase';
+import { normalizeProfile } from './profile-guard';
 import type { AthleteRecord, Offer, School } from './types';
 
 /** Fetch one athlete's full record by slug (public read). */
@@ -13,7 +14,7 @@ export async function getAthleteBySlug(slug: string): Promise<AthleteRecord | nu
   return {
     id: data.id,
     slug: data.slug,
-    profile: data.profile,
+    profile: normalizeProfile(data.profile),
     cardVisibility: data.card_visibility,
     photoUrl: data.photo_url,
   };

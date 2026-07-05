@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import type { AthleteProfile, AthleteRecord, Offer } from './types';
+import { normalizeProfile } from './profile-guard';
 import { SECTIONS, applySectionValues, type SectionKey } from './profile-sections';
 
 /** Read the athlete row owned by this user (RLS-safe: owner reads own row). */
@@ -14,7 +15,7 @@ export async function getOwnedAthlete(
   if (error) throw error;
   if (!data) return null;
   return {
-    id: data.id, slug: data.slug, profile: data.profile,
+    id: data.id, slug: data.slug, profile: normalizeProfile(data.profile),
     cardVisibility: data.card_visibility, photoUrl: data.photo_url,
   };
 }
