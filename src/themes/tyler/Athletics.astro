@@ -1,5 +1,6 @@
 ---
 import type { Stat } from '../../lib/types';
+import { phValue } from '../../lib/display';
 interface Props { measurables: Stat[]; honors: string[]; }
 const { measurables, honors } = Astro.props as Props;
 ---
@@ -21,7 +22,7 @@ const { measurables, honors } = Astro.props as Props;
     <div class="grid">
       {measurables.map((s) => (
         <div class={`tile reveal ${s.placeholder ? 'is-placeholder' : ''}`}>
-          <div class="tile__value">{s.value}</div>
+          <div class="tile__value">{phValue(s.value, s.placeholder)}</div>
           <div class="tile__label">{s.label}</div>
         </div>
       ))}

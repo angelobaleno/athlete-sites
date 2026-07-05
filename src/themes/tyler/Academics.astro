@@ -1,4 +1,5 @@
 ---
+import { phValue } from '../../lib/display';
 const { academics } = Astro.props;
 ---
 
@@ -21,11 +22,11 @@ const { academics } = Astro.props;
       <div class="acad__rows">
         <div class="acad__row reveal">
           <span class="acad__k">Test Scores</span>
-          <span class={`acad__v ${academics.testScore.placeholder ? 'is-ph' : ''}`}>{academics.testScore.value}</span>
+          <span class={`acad__v ${academics.testScore.placeholder ? 'is-ph' : ''}`}>{phValue(academics.testScore.value, academics.testScore.placeholder)}</span>
         </div>
         <div class="acad__row reveal">
           <span class="acad__k">Intended Major</span>
-          <span class={`acad__v ${academics.major.placeholder ? 'is-ph' : ''}`}>{academics.major.value}</span>
+          <span class={`acad__v ${academics.major.placeholder ? 'is-ph' : ''}`}>{phValue(academics.major.value, academics.major.placeholder)}</span>
         </div>
       </div>
     </div>

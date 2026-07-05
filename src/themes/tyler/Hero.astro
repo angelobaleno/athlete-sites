@@ -1,5 +1,6 @@
 ---
 import type { Stat, PlayerView } from '../../lib/types';
+import { phValue } from '../../lib/display';
 interface Props { player: PlayerView; headline: Stat[]; }
 const { player, headline } = Astro.props as Props;
 const photo = `${import.meta.env.BASE_URL}/${player.heroPhoto}`.replace(/\/{2,}/g, '/');
@@ -27,7 +28,7 @@ const photo = `${import.meta.env.BASE_URL}/${player.heroPhoto}`.replace(/\/{2,}/
       <div class="rail" role="list" aria-label="Key measurables">
         {headline.map((s) => (
           <div class="rail__item" role="listitem">
-            <span class="rail__value">{s.value}</span>
+            <span class="rail__value">{phValue(s.value, s.placeholder)}</span>
             <span class="rail__label">{s.label}</span>
           </div>
         ))}
