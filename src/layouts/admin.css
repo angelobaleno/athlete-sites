@@ -1,0 +1,24 @@
+/* Neutral admin skin — owned by the admin panel, independent of any public theme.
+   Same dark-athletic values Tyler's admin used, but sourced here so ANY athlete's
+   admin works regardless of their public skin. */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --a-bg:        #0E0E10;
+  --a-surface:   #151419;
+  --a-surface-2: #1C1B22;
+  --a-line:      #2A2831;
+  --a-text:      #F5F3EF;
+  --a-muted:     #9A97A2;
+  --a-accent:    #F2A81D;
+  --a-accent-hi: #FFC24D;
+  --a-danger:    #E5534B;
+  --a-radius:    4px;
+  --a-display:   'Saira Condensed', 'Arial Narrow', sans-serif;
+  --a-body:      'Inter', system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+.admin-body { min-height: 100dvh; background: var(--a-bg); color: var(--a-text);
+  font-family: var(--a-body); margin: 0; -webkit-font-smoothing: antialiased; }
+.admin-main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem; }

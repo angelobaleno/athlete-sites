@@ -1,5 +1,5 @@
 .logout-btn {
-  padding: 0.5rem 0.9rem; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 0.5rem 0.9rem; border: 1px solid var(--a-line); border-radius: var(--a-radius);
   background: transparent; color: inherit; cursor: pointer; font-size: 0.85rem;
 }
-.logout-btn:hover { border-color: var(--gold); color: var(--gold); }
+.logout-btn:hover { border-color: var(--a-accent); color: var(--a-accent); }

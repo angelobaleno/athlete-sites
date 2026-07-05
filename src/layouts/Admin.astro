@@ -1,5 +1,5 @@
 ---
-import '../themes/tyler/global.css';
+import './admin.css';
 interface Props { title?: string; }
 const { title = 'Admin' } = Astro.props;
 ---
@@ -14,9 +14,5 @@ const { title = 'Admin' } = Astro.props;
     <main class="admin-main">
       <slot />
     </main>
-    <style>
-      .admin-body { min-height: 100dvh; background: var(--ink); color: var(--bone); margin: 0; }
-      .admin-main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem; }
-    </style>
   </body>
 </html>
