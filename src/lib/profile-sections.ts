@@ -115,3 +115,40 @@ export function sectionFieldViews(def: SectionDef, sectionData: unknown): FieldV
     value: getPath(sectionData, f.path), required: !!f.required,
   }));
 }
+
+function looksLikeUrl(v: string): boolean {
+  return /^https?:\/\/\S+$/i.test(v.trim());
+}
+
+export function applySectionValues(
+  def: SectionDef,
+  sectionData: unknown,
+  values: Record<string, string>,
+): { data: unknown } | { error: string } {
+  const fields = resolveFields(def, sectionData);
+
+  // Validate against provided values (fall back to current value when a key is absent).
+  for (const f of fields) {
+    const provided = Object.prototype.hasOwnProperty.call(values, f.name);
+    const value = provided ? values[f.name] : getPath(sectionData, f.path);
+    if (f.required && value.trim() === '') {
+      return { error: `${f.label} is required` };
+    }
+    if (f.kind === 'url' && value.trim() !== '' && !looksLikeUrl(value)) {
+      return { error: `${f.label} must be a URL (https://…)` };
+    }
+  }
+
+  // Write provided values, then derive placeholder flags.
+  let data: unknown = sectionData;
+  for (const f of fields) {
+    if (Object.prototype.hasOwnProperty.call(values, f.name)) {
+      data = setPath(data, f.path, values[f.name]);
+    }
+    if (f.placeholderPath) {
+      const v = getPath(data, f.path);
+      data = setPath(data, f.placeholderPath, v.trim() === '' ? (true as unknown as string) : (false as unknown as string));
+    }
+  }
+  return { data };
+}
