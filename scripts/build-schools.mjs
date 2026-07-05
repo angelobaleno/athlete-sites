@@ -16,7 +16,10 @@ const norm = (t, level) => ({
   conference: t.conference ?? null,
   location: t.location && t.location.city && t.location.state
     ? `${t.location.city}, ${t.location.state}` : null,
-  logoUrl: Array.isArray(t.logos) && t.logos.length ? t.logos[0] : null,
+  // CFBD hands back http:// espn logo URLs — force https or the logos are
+  // blocked as mixed content on the https athlete sites.
+  logoUrl: Array.isArray(t.logos) && t.logos.length
+    ? t.logos[0].replace(/^http:\/\//, 'https://') : null,
 });
 
 const fbsRes = await fetch('https://api.collegefootballdata.com/teams/fbs?year=2025', { headers });

@@ -5,7 +5,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Colorado Springs, CO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2005.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png"
   },
   {
     "name": "Akron",
@@ -13,7 +13,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Akron, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2006.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png"
   },
   {
     "name": "Alabama",
@@ -21,7 +21,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Tuscaloosa, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png"
   },
   {
     "name": "App State",
@@ -29,7 +29,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Boone, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2026.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png"
   },
   {
     "name": "Arizona",
@@ -37,7 +37,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Tucson, AZ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/12.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png"
   },
   {
     "name": "Arizona State",
@@ -45,7 +45,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Tempe, AZ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/9.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png"
   },
   {
     "name": "Arkansas",
@@ -53,7 +53,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Fayetteville, AR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/8.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png"
   },
   {
     "name": "Arkansas State",
@@ -61,7 +61,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Jonesboro, AR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2032.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png"
   },
   {
     "name": "Army",
@@ -69,7 +69,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "West Point, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/349.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png"
   },
   {
     "name": "Auburn",
@@ -77,7 +77,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Auburn, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png"
   },
   {
     "name": "Ball State",
@@ -85,7 +85,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Muncie, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2050.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png"
   },
   {
     "name": "Baylor",
@@ -93,7 +93,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Waco, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/239.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png"
   },
   {
     "name": "Boise State",
@@ -101,7 +101,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Boise, ID",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png"
   },
   {
     "name": "Boston College",
@@ -109,7 +109,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Chestnut Hill, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/103.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png"
   },
   {
     "name": "Bowling Green",
@@ -117,7 +117,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Bowling Green, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/189.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png"
   },
   {
     "name": "Buffalo",
@@ -125,7 +125,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Amherst, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2084.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png"
   },
   {
     "name": "BYU",
@@ -133,7 +133,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Provo, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/252.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png"
   },
   {
     "name": "California",
@@ -141,7 +141,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Berkeley, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/25.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png"
   },
   {
     "name": "Central Michigan",
@@ -149,7 +149,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Mount Pleasant, MI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2117.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png"
   },
   {
     "name": "Charlotte",
@@ -157,7 +157,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Charlotte, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2429.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png"
   },
   {
     "name": "Cincinnati",
@@ -165,7 +165,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Cincinnati, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2132.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png"
   },
   {
     "name": "Clemson",
@@ -173,7 +173,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Clemson, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png"
   },
   {
     "name": "Coastal Carolina",
@@ -181,7 +181,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Conway, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/324.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png"
   },
   {
     "name": "Colorado",
@@ -189,7 +189,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Boulder, CO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/38.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png"
   },
   {
     "name": "Colorado State",
@@ -197,7 +197,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Fort Collins, CO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/36.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png"
   },
   {
     "name": "Delaware",
@@ -205,7 +205,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Newark, DE",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/48.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png"
   },
   {
     "name": "Duke",
@@ -213,7 +213,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Durham, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
   },
   {
     "name": "East Carolina",
@@ -221,7 +221,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Greenville, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/151.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png"
   },
   {
     "name": "Eastern Michigan",
@@ -229,7 +229,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Ypsilanti, MI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2199.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png"
   },
   {
     "name": "Florida",
@@ -237,7 +237,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Gainesville, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
   },
   {
     "name": "Florida Atlantic",
@@ -245,7 +245,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Boca Raton, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2226.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png"
   },
   {
     "name": "Florida International",
@@ -253,7 +253,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Miami, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2229.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png"
   },
   {
     "name": "Florida State",
@@ -261,7 +261,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Tallahassee, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/52.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png"
   },
   {
     "name": "Fresno State",
@@ -269,7 +269,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Fresno, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/278.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png"
   },
   {
     "name": "Georgia",
@@ -277,7 +277,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Athens, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/61.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png"
   },
   {
     "name": "Georgia Southern",
@@ -285,7 +285,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Statesboro, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/290.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png"
   },
   {
     "name": "Georgia State",
@@ -293,7 +293,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Atlanta, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2247.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png"
   },
   {
     "name": "Georgia Tech",
@@ -301,7 +301,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Atlanta, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png"
   },
   {
     "name": "Hawai'i",
@@ -309,7 +309,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Honolulu, HI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/62.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png"
   },
   {
     "name": "Houston",
@@ -317,7 +317,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Houston, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/248.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png"
   },
   {
     "name": "Illinois",
@@ -325,7 +325,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Champaign, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
   },
   {
     "name": "Indiana",
@@ -333,7 +333,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Bloomington, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/84.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png"
   },
   {
     "name": "Iowa",
@@ -341,7 +341,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Iowa City, IA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2294.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png"
   },
   {
     "name": "Iowa State",
@@ -349,7 +349,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Ames, IA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/66.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png"
   },
   {
     "name": "Jacksonville State",
@@ -357,7 +357,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Jacksonville, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/55.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png"
   },
   {
     "name": "James Madison",
@@ -365,7 +365,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Harrisonburg, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/256.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png"
   },
   {
     "name": "Kansas",
@@ -373,7 +373,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Lawrence, KS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2305.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png"
   },
   {
     "name": "Kansas State",
@@ -381,7 +381,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Manhattan, KS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2306.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png"
   },
   {
     "name": "Kennesaw State",
@@ -389,7 +389,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Kennesaw, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/338.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png"
   },
   {
     "name": "Kent State",
@@ -397,7 +397,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Kent, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2309.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png"
   },
   {
     "name": "Kentucky",
@@ -405,7 +405,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Lexington, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
   },
   {
     "name": "Liberty",
@@ -413,7 +413,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Lynchburg, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2335.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png"
   },
   {
     "name": "Louisiana",
@@ -421,7 +421,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Lafayette, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/309.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png"
   },
   {
     "name": "Louisiana Tech",
@@ -429,7 +429,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Ruston, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2348.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png"
   },
   {
     "name": "Louisville",
@@ -437,7 +437,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Louisville, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/97.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png"
   },
   {
     "name": "LSU",
@@ -445,7 +445,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Baton Rouge, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/99.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png"
   },
   {
     "name": "Marshall",
@@ -453,7 +453,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Huntington, WV",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/276.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png"
   },
   {
     "name": "Maryland",
@@ -461,7 +461,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "College Park, MD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/120.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png"
   },
   {
     "name": "Massachusetts",
@@ -469,7 +469,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Hadley, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/113.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png"
   },
   {
     "name": "Memphis",
@@ -477,7 +477,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Memphis, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/235.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png"
   },
   {
     "name": "Miami",
@@ -485,7 +485,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Miami Gardens, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2390.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png"
   },
   {
     "name": "Miami (OH)",
@@ -493,7 +493,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Oxford, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/193.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png"
   },
   {
     "name": "Michigan",
@@ -501,7 +501,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Ann Arbor, MI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
   },
   {
     "name": "Michigan State",
@@ -509,7 +509,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "East Lansing, MI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
   },
   {
     "name": "Middle Tennessee",
@@ -517,7 +517,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Murfreesboro, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2393.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png"
   },
   {
     "name": "Minnesota",
@@ -525,7 +525,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Minneapolis, MN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/135.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png"
   },
   {
     "name": "Mississippi State",
@@ -533,7 +533,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Starkville, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/344.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png"
   },
   {
     "name": "Missouri",
@@ -541,7 +541,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Columbia, MO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/142.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png"
   },
   {
     "name": "Missouri State",
@@ -549,7 +549,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Springfield, MO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2623.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png"
   },
   {
     "name": "Navy",
@@ -557,7 +557,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Annapolis, MD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2426.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png"
   },
   {
     "name": "NC State",
@@ -565,7 +565,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Raleigh, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
   },
   {
     "name": "Nebraska",
@@ -573,7 +573,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Lincoln, NE",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png"
   },
   {
     "name": "Nevada",
@@ -581,7 +581,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Reno, NV",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2440.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png"
   },
   {
     "name": "New Mexico",
@@ -589,7 +589,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Albuquerque, NM",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/167.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png"
   },
   {
     "name": "New Mexico State",
@@ -597,7 +597,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Las Cruces, NM",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/166.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png"
   },
   {
     "name": "North Carolina",
@@ -605,7 +605,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Chapel Hill, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/153.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png"
   },
   {
     "name": "Northern Illinois",
@@ -613,7 +613,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "DeKalb, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2459.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png"
   },
   {
     "name": "North Texas",
@@ -621,7 +621,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Denton, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/249.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png"
   },
   {
     "name": "Northwestern",
@@ -629,7 +629,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Evanston, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/77.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png"
   },
   {
     "name": "Notre Dame",
@@ -637,7 +637,7 @@
     "level": "FBS",
     "conference": "FBS Independents",
     "location": "Notre Dame, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/87.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png"
   },
   {
     "name": "Ohio",
@@ -645,7 +645,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Athens, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/195.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png"
   },
   {
     "name": "Ohio State",
@@ -653,7 +653,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Columbus, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png"
   },
   {
     "name": "Oklahoma",
@@ -661,7 +661,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Norman, OK",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/201.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png"
   },
   {
     "name": "Oklahoma State",
@@ -669,7 +669,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Stillwater, OK",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/197.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png"
   },
   {
     "name": "Old Dominion",
@@ -677,7 +677,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Norfolk, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/295.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png"
   },
   {
     "name": "Ole Miss",
@@ -685,7 +685,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Oxford, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/145.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png"
   },
   {
     "name": "Oregon",
@@ -693,7 +693,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Eugene, OR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png"
   },
   {
     "name": "Oregon State",
@@ -701,7 +701,7 @@
     "level": "FBS",
     "conference": "Pac-12",
     "location": "Corvallis, OR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png"
   },
   {
     "name": "Penn State",
@@ -709,7 +709,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "University Park, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/213.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png"
   },
   {
     "name": "Pittsburgh",
@@ -717,7 +717,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Pittsburgh, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/221.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png"
   },
   {
     "name": "Purdue",
@@ -725,7 +725,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "West Lafayette, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2509.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png"
   },
   {
     "name": "Rice",
@@ -733,7 +733,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Houston, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/242.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png"
   },
   {
     "name": "Rutgers",
@@ -741,7 +741,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Piscataway, NJ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/164.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png"
   },
   {
     "name": "Sam Houston",
@@ -749,7 +749,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Huntsville, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2534.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png"
   },
   {
     "name": "San Diego State",
@@ -757,7 +757,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "San Diego, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/21.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png"
   },
   {
     "name": "San José State",
@@ -765,7 +765,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "San Jose, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/23.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png"
   },
   {
     "name": "SMU",
@@ -773,7 +773,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "University Park, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2567.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png"
   },
   {
     "name": "South Alabama",
@@ -781,7 +781,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Mobile, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/6.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png"
   },
   {
     "name": "South Carolina",
@@ -789,7 +789,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Columbia, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2579.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png"
   },
   {
     "name": "Southern Miss",
@@ -797,7 +797,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Hattiesburg, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2572.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png"
   },
   {
     "name": "South Florida",
@@ -805,7 +805,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Tampa, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/58.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png"
   },
   {
     "name": "Stanford",
@@ -813,7 +813,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Stanford, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/24.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png"
   },
   {
     "name": "Syracuse",
@@ -821,7 +821,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Syracuse, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/183.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png"
   },
   {
     "name": "TCU",
@@ -829,7 +829,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Fort Worth, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2628.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png"
   },
   {
     "name": "Temple",
@@ -837,7 +837,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Philadelphia, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/218.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png"
   },
   {
     "name": "Tennessee",
@@ -845,7 +845,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Knoxville, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2633.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png"
   },
   {
     "name": "Texas",
@@ -853,7 +853,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Austin, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/251.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png"
   },
   {
     "name": "Texas A&M",
@@ -861,7 +861,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "College Station, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/245.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png"
   },
   {
     "name": "Texas State",
@@ -869,7 +869,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "San Marcos, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/326.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png"
   },
   {
     "name": "Texas Tech",
@@ -877,7 +877,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Lubbock, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2641.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png"
   },
   {
     "name": "Toledo",
@@ -885,7 +885,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Toledo, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2649.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png"
   },
   {
     "name": "Troy",
@@ -893,7 +893,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Troy, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2653.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png"
   },
   {
     "name": "Tulane",
@@ -901,7 +901,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "New Orleans, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2655.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png"
   },
   {
     "name": "Tulsa",
@@ -909,7 +909,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Tulsa, OK",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/202.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png"
   },
   {
     "name": "UAB",
@@ -917,7 +917,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "Birmingham, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/5.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png"
   },
   {
     "name": "UCF",
@@ -925,7 +925,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Orlando, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2116.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png"
   },
   {
     "name": "UCLA",
@@ -933,7 +933,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Pasadena, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png"
   },
   {
     "name": "UConn",
@@ -941,7 +941,7 @@
     "level": "FBS",
     "conference": "FBS Independents",
     "location": "East Hartford, CT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
   },
   {
     "name": "UL Monroe",
@@ -949,7 +949,7 @@
     "level": "FBS",
     "conference": "Sun Belt",
     "location": "Monroe, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2433.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png"
   },
   {
     "name": "UNLV",
@@ -957,7 +957,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Las Vegas, NV",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2439.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png"
   },
   {
     "name": "USC",
@@ -965,7 +965,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Los Angeles, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
   },
   {
     "name": "Utah",
@@ -973,7 +973,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Salt Lake City, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/254.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png"
   },
   {
     "name": "Utah State",
@@ -981,7 +981,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Logan, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/328.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png"
   },
   {
     "name": "UTEP",
@@ -989,7 +989,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "El Paso, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2638.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png"
   },
   {
     "name": "UTSA",
@@ -997,7 +997,7 @@
     "level": "FBS",
     "conference": "American Athletic",
     "location": "San Antonio, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2636.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png"
   },
   {
     "name": "Vanderbilt",
@@ -1005,7 +1005,7 @@
     "level": "FBS",
     "conference": "SEC",
     "location": "Nashville, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/238.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png"
   },
   {
     "name": "Virginia",
@@ -1013,7 +1013,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Charlottesville, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/258.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png"
   },
   {
     "name": "Virginia Tech",
@@ -1021,7 +1021,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Blacksburg, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/259.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png"
   },
   {
     "name": "Wake Forest",
@@ -1029,7 +1029,7 @@
     "level": "FBS",
     "conference": "ACC",
     "location": "Winston-Salem, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/154.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png"
   },
   {
     "name": "Washington",
@@ -1037,7 +1037,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Seattle, WA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png"
   },
   {
     "name": "Washington State",
@@ -1045,7 +1045,7 @@
     "level": "FBS",
     "conference": "Pac-12",
     "location": "Pullman, WA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/265.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png"
   },
   {
     "name": "Western Kentucky",
@@ -1053,7 +1053,7 @@
     "level": "FBS",
     "conference": "Conference USA",
     "location": "Bowling Green, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/98.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png"
   },
   {
     "name": "Western Michigan",
@@ -1061,7 +1061,7 @@
     "level": "FBS",
     "conference": "Mid-American",
     "location": "Kalamazoo, MI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2711.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png"
   },
   {
     "name": "West Virginia",
@@ -1069,7 +1069,7 @@
     "level": "FBS",
     "conference": "Big 12",
     "location": "Morgantown, WV",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/277.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png"
   },
   {
     "name": "Wisconsin",
@@ -1077,7 +1077,7 @@
     "level": "FBS",
     "conference": "Big Ten",
     "location": "Madison, WI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/275.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png"
   },
   {
     "name": "Wyoming",
@@ -1085,7 +1085,7 @@
     "level": "FBS",
     "conference": "Mountain West",
     "location": "Laramie, WY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2751.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png"
   },
   {
     "name": "Abilene Christian",
@@ -1093,7 +1093,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Abilene, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2000.png"
   },
   {
     "name": "Alabama A&M",
@@ -1101,7 +1101,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Huntsville, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2010.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2010.png"
   },
   {
     "name": "Alabama State",
@@ -1109,7 +1109,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Montgomery, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2011.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2011.png"
   },
   {
     "name": "Alcorn State",
@@ -1117,7 +1117,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Lorman, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2016.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2016.png"
   },
   {
     "name": "Arkansas-Pine Bluff",
@@ -1125,7 +1125,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Pine Bluff, AR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2029.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2029.png"
   },
   {
     "name": "Austin Peay",
@@ -1133,7 +1133,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Clarksville, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2046.png"
   },
   {
     "name": "Bethune-Cookman",
@@ -1141,7 +1141,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Daytona Beach, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2065.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2065.png"
   },
   {
     "name": "Brown",
@@ -1149,7 +1149,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Providence, RI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/225.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/225.png"
   },
   {
     "name": "Bryant",
@@ -1157,7 +1157,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Smithfield, RI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2803.png"
   },
   {
     "name": "Bucknell",
@@ -1165,7 +1165,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Lewisburg, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2083.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2083.png"
   },
   {
     "name": "Butler",
@@ -1173,7 +1173,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Indianapolis, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2086.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2086.png"
   },
   {
     "name": "Cal Poly",
@@ -1181,7 +1181,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "San Luis Obispo, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/13.png"
   },
   {
     "name": "Campbell",
@@ -1189,7 +1189,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Buies Creek, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2097.png"
   },
   {
     "name": "Central Arkansas",
@@ -1197,7 +1197,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Conway, AR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2110.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2110.png"
   },
   {
     "name": "Central Connecticut",
@@ -1205,7 +1205,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "New Britain, CT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2115.png"
   },
   {
     "name": "Charleston Southern",
@@ -1213,7 +1213,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "North Charleston, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2127.png"
   },
   {
     "name": "Chattanooga",
@@ -1221,7 +1221,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Chattanooga, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/236.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/236.png"
   },
   {
     "name": "Colgate",
@@ -1229,7 +1229,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Hamilton, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2142.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2142.png"
   },
   {
     "name": "Columbia",
@@ -1237,7 +1237,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Manhattan, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/171.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/171.png"
   },
   {
     "name": "Cornell",
@@ -1245,7 +1245,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Ithaca, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/172.png"
   },
   {
     "name": "Dartmouth",
@@ -1253,7 +1253,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Hanover, NH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/159.png"
   },
   {
     "name": "Davidson",
@@ -1261,7 +1261,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Davidson, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2166.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2166.png"
   },
   {
     "name": "Dayton",
@@ -1269,7 +1269,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Dayton, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2168.png"
   },
   {
     "name": "Delaware State",
@@ -1277,7 +1277,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Dover, DE",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2169.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2169.png"
   },
   {
     "name": "Drake",
@@ -1285,7 +1285,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Des Moines, IA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2181.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2181.png"
   },
   {
     "name": "Duquesne",
@@ -1293,7 +1293,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "Pittsburgh, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2184.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2184.png"
   },
   {
     "name": "Eastern Illinois",
@@ -1301,7 +1301,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Charleston, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2197.png"
   },
   {
     "name": "Eastern Kentucky",
@@ -1309,7 +1309,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Richmond, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2198.png"
   },
   {
     "name": "Eastern Washington",
@@ -1317,7 +1317,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Cheney, WA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/331.png"
   },
   {
     "name": "East Tennessee State",
@@ -1325,7 +1325,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Johnson City, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2193.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png"
   },
   {
     "name": "East Texas A&M",
@@ -1333,7 +1333,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Commerce, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2837.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2837.png"
   },
   {
     "name": "Elon",
@@ -1341,7 +1341,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Elon, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2210.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2210.png"
   },
   {
     "name": "Florida A&M",
@@ -1349,7 +1349,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Tallahassee, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/50.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png"
   },
   {
     "name": "Fordham",
@@ -1357,7 +1357,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Bronx, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2230.png"
   },
   {
     "name": "Furman",
@@ -1365,7 +1365,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Greenville, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/231.png"
   },
   {
     "name": "Gardner-Webb",
@@ -1373,7 +1373,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Boiling Springs, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2241.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png"
   },
   {
     "name": "Georgetown",
@@ -1381,7 +1381,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Washington, DC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/46.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/46.png"
   },
   {
     "name": "Grambling",
@@ -1389,7 +1389,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Grambling, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2755.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2755.png"
   },
   {
     "name": "Hampton",
@@ -1397,7 +1397,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Hampton, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2261.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2261.png"
   },
   {
     "name": "Harvard",
@@ -1405,7 +1405,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Boston, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/108.png"
   },
   {
     "name": "Holy Cross",
@@ -1413,7 +1413,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Worcester, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/107.png"
   },
   {
     "name": "Houston Christian",
@@ -1421,7 +1421,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Houston, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2277.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2277.png"
   },
   {
     "name": "Howard",
@@ -1429,7 +1429,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Washington, DC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/47.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/47.png"
   },
   {
     "name": "Idaho",
@@ -1437,7 +1437,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Moscow, ID",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/70.png"
   },
   {
     "name": "Idaho State",
@@ -1445,7 +1445,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Pocatello, ID",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/304.png"
   },
   {
     "name": "Illinois State",
@@ -1453,7 +1453,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Normal, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2287.png"
   },
   {
     "name": "Incarnate Word",
@@ -1461,7 +1461,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "San Antonio, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2916.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2916.png"
   },
   {
     "name": "Indiana State",
@@ -1469,7 +1469,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Terre Haute, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/282.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/282.png"
   },
   {
     "name": "Jackson State",
@@ -1477,7 +1477,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Jackson, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2296.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2296.png"
   },
   {
     "name": "Lafayette",
@@ -1485,7 +1485,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Easton, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/322.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/322.png"
   },
   {
     "name": "Lamar",
@@ -1493,7 +1493,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Beaumont, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2320.png"
   },
   {
     "name": "Lehigh",
@@ -1501,7 +1501,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Bethlehem, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2329.png"
   },
   {
     "name": "Lindenwood",
@@ -1509,7 +1509,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Saint Charles, MO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2815.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2815.png"
   },
   {
     "name": "Long Island University",
@@ -1525,7 +1525,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Orono, ME",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/311.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/311.png"
   },
   {
     "name": "Marist",
@@ -1533,7 +1533,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Poughkeepsie, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2368.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2368.png"
   },
   {
     "name": "McNeese",
@@ -1541,7 +1541,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Lake Charles, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2377.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2377.png"
   },
   {
     "name": "Mercer",
@@ -1549,7 +1549,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Macon, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2382.png"
   },
   {
     "name": "Mercyhurst",
@@ -1557,7 +1557,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "Erie, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2385.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2385.png"
   },
   {
     "name": "Merrimack",
@@ -1565,7 +1565,7 @@
     "level": "FCS",
     "conference": "FCS Independents",
     "location": "North Andover, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2771.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2771.png"
   },
   {
     "name": "Mississippi Valley State",
@@ -1573,7 +1573,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Itta Bena, MS",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2400.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2400.png"
   },
   {
     "name": "Monmouth",
@@ -1581,7 +1581,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "West Long Branch, NJ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2405.png"
   },
   {
     "name": "Montana",
@@ -1589,7 +1589,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Missoula, MT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/149.png"
   },
   {
     "name": "Montana State",
@@ -1597,7 +1597,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Bozeman, MT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/147.png"
   },
   {
     "name": "Morehead State",
@@ -1605,7 +1605,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Morehead, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2413.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2413.png"
   },
   {
     "name": "Morgan State",
@@ -1613,7 +1613,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Baltimore, MD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2415.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2415.png"
   },
   {
     "name": "Murray State",
@@ -1621,7 +1621,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Murray, KY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/93.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/93.png"
   },
   {
     "name": "New Hampshire",
@@ -1629,7 +1629,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Durham, NH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/160.png"
   },
   {
     "name": "New Haven",
@@ -1637,7 +1637,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "West Haven, CT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2441.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2441.png"
   },
   {
     "name": "Nicholls",
@@ -1645,7 +1645,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Thibodaux, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2447.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png"
   },
   {
     "name": "Norfolk State",
@@ -1653,7 +1653,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Norfolk, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2450.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2450.png"
   },
   {
     "name": "North Alabama",
@@ -1661,7 +1661,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Florence, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2453.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2453.png"
   },
   {
     "name": "North Carolina A&T",
@@ -1669,7 +1669,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Greensboro, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2448.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2448.png"
   },
   {
     "name": "North Carolina Central",
@@ -1677,7 +1677,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Durham, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2428.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2428.png"
   },
   {
     "name": "North Dakota",
@@ -1685,7 +1685,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Grand Forks, ND",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/155.png"
   },
   {
     "name": "Northern Arizona",
@@ -1693,7 +1693,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Flagstaff, AZ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2464.png"
   },
   {
     "name": "Northern Colorado",
@@ -1701,7 +1701,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Greeley, CO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2458.png"
   },
   {
     "name": "Northern Iowa",
@@ -1709,7 +1709,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Cedar Falls, IA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
   },
   {
     "name": "Northwestern State",
@@ -1717,7 +1717,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Natchitoches, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2466.png"
   },
   {
     "name": "Pennsylvania",
@@ -1725,7 +1725,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Philadelphia, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/219.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/219.png"
   },
   {
     "name": "Portland State",
@@ -1733,7 +1733,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Portland, OR",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2502.png"
   },
   {
     "name": "Prairie View A&M",
@@ -1741,7 +1741,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Prairie View, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2504.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2504.png"
   },
   {
     "name": "Presbyterian",
@@ -1749,7 +1749,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Clinton, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2506.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2506.png"
   },
   {
     "name": "Princeton",
@@ -1757,7 +1757,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "Princeton, NJ",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/163.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/163.png"
   },
   {
     "name": "Rhode Island",
@@ -1765,7 +1765,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Kingston, RI",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/227.png"
   },
   {
     "name": "Richmond",
@@ -1773,7 +1773,7 @@
     "level": "FCS",
     "conference": "Patriot",
     "location": "Richmond, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/257.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/257.png"
   },
   {
     "name": "Robert Morris",
@@ -1781,7 +1781,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "Moon Township, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2523.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2523.png"
   },
   {
     "name": "Sacred Heart",
@@ -1789,7 +1789,7 @@
     "level": "FCS",
     "conference": "FCS Independents",
     "location": "Fairfield, CT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2529.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2529.png"
   },
   {
     "name": "Samford",
@@ -1797,7 +1797,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Homewood, AL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2535.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2535.png"
   },
   {
     "name": "San Diego",
@@ -1805,7 +1805,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "San Diego, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/301.png"
   },
   {
     "name": "SE Louisiana",
@@ -1813,7 +1813,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Hammond, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2545.png"
   },
   {
     "name": "South Carolina State",
@@ -1821,7 +1821,7 @@
     "level": "FCS",
     "conference": "MEAC",
     "location": "Orangeburg, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2569.png"
   },
   {
     "name": "South Dakota",
@@ -1829,7 +1829,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Vermillion, SD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/233.png"
   },
   {
     "name": "South Dakota State",
@@ -1837,7 +1837,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Brookings, SD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2571.png"
   },
   {
     "name": "Southeast Missouri State",
@@ -1845,7 +1845,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Cape Girardeau, MO",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2546.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2546.png"
   },
   {
     "name": "Southern",
@@ -1853,7 +1853,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Baton Rouge, LA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2582.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2582.png"
   },
   {
     "name": "Southern Illinois",
@@ -1861,7 +1861,7 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Carbondale, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/79.png"
   },
   {
     "name": "Southern Utah",
@@ -1869,7 +1869,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Cedar City, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/253.png"
   },
   {
     "name": "Stephen F. Austin",
@@ -1877,7 +1877,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Nacogdoches, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2617.png"
   },
   {
     "name": "Stetson",
@@ -1885,7 +1885,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "DeLand, FL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/56.png"
   },
   {
     "name": "St. Francis (PA)",
@@ -1893,7 +1893,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "Loretto, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2598.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2598.png"
   },
   {
     "name": "Stonehill",
@@ -1901,7 +1901,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "North Easton, MA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/284.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/284.png"
   },
   {
     "name": "Stony Brook",
@@ -1909,7 +1909,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Stony Brook, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2619.png"
   },
   {
     "name": "St. Thomas (MN)",
@@ -1917,7 +1917,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Saint Paul, MN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2900.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2900.png"
   },
   {
     "name": "Tarleton State",
@@ -1925,7 +1925,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Stephenville, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png"
   },
   {
     "name": "Tennessee State",
@@ -1933,7 +1933,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Nashville, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2634.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2634.png"
   },
   {
     "name": "Tennessee Tech",
@@ -1941,7 +1941,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Cookeville, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2635.png"
   },
   {
     "name": "Texas Southern",
@@ -1949,7 +1949,7 @@
     "level": "FCS",
     "conference": "SWAC",
     "location": "Houston, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2640.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2640.png"
   },
   {
     "name": "The Citadel",
@@ -1957,7 +1957,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Charleston, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2643.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2643.png"
   },
   {
     "name": "Towson",
@@ -1965,7 +1965,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Towson, MD",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/119.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/119.png"
   },
   {
     "name": "UAlbany",
@@ -1973,7 +1973,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Albany, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/399.png"
   },
   {
     "name": "UC Davis",
@@ -1981,7 +1981,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Davis, CA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/302.png"
   },
   {
     "name": "Utah Tech",
@@ -1989,7 +1989,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Saint George, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/3101.png"
   },
   {
     "name": "UT Martin",
@@ -1997,7 +1997,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Martin, TN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2630.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2630.png"
   },
   {
     "name": "UT Rio Grande Valley",
@@ -2005,7 +2005,7 @@
     "level": "FCS",
     "conference": "Southland",
     "location": "Edinburg, TX",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/292.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/292.png"
   },
   {
     "name": "Valparaiso",
@@ -2013,7 +2013,7 @@
     "level": "FCS",
     "conference": "Pioneer",
     "location": "Valparaiso, IN",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2674.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png"
   },
   {
     "name": "Villanova",
@@ -2021,7 +2021,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Villanova, PA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/222.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/222.png"
   },
   {
     "name": "VMI",
@@ -2029,7 +2029,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Lexington, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2678.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2678.png"
   },
   {
     "name": "Wagner",
@@ -2037,7 +2037,7 @@
     "level": "FCS",
     "conference": "NEC",
     "location": "Staten Island, NY",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2681.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2681.png"
   },
   {
     "name": "Weber State",
@@ -2045,7 +2045,7 @@
     "level": "FCS",
     "conference": "Big Sky",
     "location": "Ogden, UT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2692.png"
   },
   {
     "name": "Western Carolina",
@@ -2053,7 +2053,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Cullowhee, NC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2717.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2717.png"
   },
   {
     "name": "Western Illinois",
@@ -2061,7 +2061,7 @@
     "level": "FCS",
     "conference": "Big South-OVC",
     "location": "Macomb, IL",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2710.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2710.png"
   },
   {
     "name": "West Georgia",
@@ -2069,7 +2069,7 @@
     "level": "FCS",
     "conference": "UAC",
     "location": "Carrollton, GA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2698.png"
   },
   {
     "name": "William & Mary",
@@ -2077,7 +2077,7 @@
     "level": "FCS",
     "conference": "CAA",
     "location": "Williamsburg, VA",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2729.png"
   },
   {
     "name": "Wofford",
@@ -2085,7 +2085,7 @@
     "level": "FCS",
     "conference": "Southern",
     "location": "Spartanburg, SC",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2747.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2747.png"
   },
   {
     "name": "Yale",
@@ -2093,7 +2093,7 @@
     "level": "FCS",
     "conference": "Ivy",
     "location": "New Haven, CT",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/43.png"
   },
   {
     "name": "Youngstown State",
@@ -2101,6 +2101,6 @@
     "level": "FCS",
     "conference": "MVFC",
     "location": "Youngstown, OH",
-    "logoUrl": "http://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
+    "logoUrl": "https://a.espncdn.com/i/teamlogos/ncaa/500/2754.png"
   }
 ]
