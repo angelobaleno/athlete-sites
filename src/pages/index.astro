@@ -16,7 +16,7 @@ const player = { ...profile.identity, heroPhoto: photoUrl };
 const offers = await resolveOffers(profile.offers);
 
 const { theme, arrangement } = getSiteConfig(slug);
-const t = getTheme(theme);
+const t = await getTheme(theme);
 const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
 ---
 

@@ -20,7 +20,7 @@ const offers = await resolveOffers(profile.offers);
 
 // Preview forces the chosen theme; arrangement stays the athlete's own.
 const { arrangement } = getSiteConfig('tyler-baleno');
-const t = getTheme(themeName);           // fail-loud on unknown theme
+const t = await getTheme(themeName);     // fail-loud on unknown theme
 const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
 ---
 
