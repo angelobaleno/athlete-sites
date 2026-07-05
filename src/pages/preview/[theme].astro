@@ -1,7 +1,6 @@
 ---
-import { getAthleteBySlug, resolveOffers } from '../../lib/athlete';
-import { getSiteConfig } from '../../lib/site-config';
-import { buildPanelList } from '../../lib/panels';
+// Dev-only theme workbench: render any registered theme over Tyler's data.
+import { loadAthleteSite } from '../../lib/athlete-site';
 import { getTheme } from '../../themes/registry';
 import ThemeRender from '../../components/ThemeRender.astro';
 
@@ -11,17 +10,10 @@ export const prerender = false;
 if (!import.meta.env.DEV) return new Response('Not found', { status: 404 });
 
 const themeName = Astro.params.theme!;
-const rec = await getAthleteBySlug('tyler-baleno');
-if (!rec) return new Response('Athlete not found', { status: 404 });
-
-const { profile, cardVisibility, photoUrl } = rec;
-const player = { ...profile.identity, heroPhoto: photoUrl };
-const offers = await resolveOffers(profile.offers);
-
-// Preview forces the chosen theme; arrangement stays the athlete's own.
-const { arrangement } = getSiteConfig('tyler-baleno');
 const t = await getTheme(themeName);     // fail-loud on unknown theme
-const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
+
+const site = await loadAthleteSite('tyler-baleno');
+if (!site) return new Response('Athlete not found', { status: 404 });
 ---
 
-<ThemeRender theme={t} panels={panels} player={player} />
+<ThemeRender theme={t} panels={site.panels} player={site.player} />

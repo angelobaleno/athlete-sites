@@ -1,27 +1,20 @@
 ---
-import { getAthleteBySlug, resolveOffers } from '../lib/athlete';
-import { getSiteConfig } from '../lib/site-config';
-import { buildPanelList } from '../lib/panels';
-import { getTheme } from '../themes/registry';
+// Default tenant: the deployment's bare domain serves Tyler (athlete #1).
+// Each athlete also has a per-slug route under /s/ that statically imports
+// their own theme; custom domains rewrite there (see docs/NEW-ATHLETE.md).
+// When the platform gets its own marketing page, it replaces this file.
+import { tylerTheme } from '../themes/tyler';
+import { loadAthleteSite } from '../lib/athlete-site';
 import ThemeRender from '../components/ThemeRender.astro';
 
 export const prerender = false;
 
-const slug = 'tyler-baleno';
-const rec = await getAthleteBySlug(slug);
-if (!rec) return new Response('Athlete not found', { status: 404 });
-
-const { profile, cardVisibility, photoUrl } = rec;
-const player = { ...profile.identity, heroPhoto: photoUrl };
-const offers = await resolveOffers(profile.offers);
-
-const { theme, arrangement } = getSiteConfig(slug);
-const t = await getTheme(theme);
-const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
+const site = await loadAthleteSite('tyler-baleno');
+if (!site) return new Response('Athlete not found', { status: 404 });
 
 // Public page: let Vercel's CDN serve it. Athlete edits show within a minute;
 // most recruiter views never touch Supabase.
 Astro.response.headers.set('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
 ---
 
-<ThemeRender theme={t} panels={panels} player={player} />
+<ThemeRender theme={tylerTheme} panels={site.panels} player={site.player} />

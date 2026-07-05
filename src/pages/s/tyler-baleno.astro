@@ -1,0 +1,19 @@
+---
+// Tyler's site. One route file per athlete: the theme is imported STATICALLY
+// so only this theme's CSS is linked on this route — the mechanism that keeps
+// athletes' skins from leaking onto each other (see themes/registry.ts).
+// A custom domain maps here via vercel.json host rewrite (docs/NEW-ATHLETE.md).
+import { tylerTheme } from '../../themes/tyler';
+import { loadAthleteSite } from '../../lib/athlete-site';
+import ThemeRender from '../../components/ThemeRender.astro';
+
+export const prerender = false;
+
+const site = await loadAthleteSite('tyler-baleno');
+if (!site) return new Response('Athlete not found', { status: 404 });
+
+// Public page: CDN-cached; athlete edits show within a minute.
+Astro.response.headers.set('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
+---
+
+<ThemeRender theme={tylerTheme} panels={site.panels} player={site.player} />

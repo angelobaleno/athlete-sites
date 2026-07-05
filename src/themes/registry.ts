@@ -1,22 +1,21 @@
 import type { ThemeComponents } from './types';
 
 /**
- * Theme registry.
+ * Theme registry — DEV/PREVIEW ONLY.
  *
- * A theme owns global `body`/`:root` styles that Astro CANNOT scope. Astro links
- * every stylesheet reachable from a route (dynamic imports included), so any theme
- * reachable from a page leaks its global CSS onto that page. `tyler` is the only
- * real, shipped theme; `bare` is a dev-only demonstrator used by the `/preview`
- * route. We register `bare` ONLY in dev so it is tree-shaken out of production
- * builds — its module and CSS never reach the live site.
+ * A theme owns global `body`/`:root` styles that Astro CANNOT scope. Astro
+ * links every stylesheet reachable from a route (dynamic imports included),
+ * so any route that can reach two themes ships both themes' global CSS. That
+ * is why production routes NEVER use this registry: each athlete has a route
+ * file (src/pages/s/<slug>.astro) that statically imports exactly one theme.
  *
- * To register a real (shipped) theme: add a loader to `loaders`.
+ * The registry only powers the dev-only /preview/[theme] route. Register
+ * every theme here (dev-gated) so it can be previewed against Tyler's data.
  */
-const loaders: Record<string, () => Promise<ThemeComponents>> = {
-  tyler: async () => (await import('./tyler')).tylerTheme,
-};
+const loaders: Record<string, () => Promise<ThemeComponents>> = {};
 
 if (import.meta.env.DEV) {
+  loaders.tyler = async () => (await import('./tyler')).tylerTheme;
   loaders.bare = async () => (await import('./bare')).bareTheme;
 }
 
