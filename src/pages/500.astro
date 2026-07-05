@@ -1,0 +1,38 @@
+---
+// Platform-level error page: shown when SSR throws (e.g. the database is
+// unreachable). Neutral — no athlete theme, no dynamic data it could re-fail on.
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Something went wrong</title>
+  </head>
+  <body>
+    <main>
+      <p class="code">500</p>
+      <h1>Something went wrong</h1>
+      <p class="note">The site hit a temporary problem. Refresh in a moment.</p>
+      <a href="/">Try again</a>
+    </main>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      body {
+        min-height: 100dvh; display: grid; place-items: center;
+        background: #0E0E10; color: #F5F3EF;
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+      }
+      main { text-align: center; padding: 2rem; }
+      .code {
+        font-family: 'Arial Narrow', sans-serif; font-weight: 900;
+        font-size: 1rem; letter-spacing: 0.35em; color: #9A97A2;
+      }
+      h1 { font-size: 1.6rem; margin-top: 0.6rem; font-weight: 700; }
+      .note { color: #9A97A2; margin-top: 0.7rem; font-size: 0.95rem; }
+      a { color: #F2A81D; display: inline-block; margin-top: 1.6rem; }
+    </style>
+  </body>
+</html>
