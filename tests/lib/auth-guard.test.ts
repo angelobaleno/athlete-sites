@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { redirectTarget } from '../../src/lib/auth-guard';
+import { redirectTarget, needsAuth } from '../../src/lib/auth-guard';
 
 describe('redirectTarget', () => {
   it('sends unauthenticated /admin visitors to /login', () => {
@@ -19,5 +19,27 @@ describe('redirectTarget', () => {
     expect(redirectTarget('/', false)).toBeNull();
     expect(redirectTarget('/', true)).toBeNull();
     expect(redirectTarget('/login', false)).toBeNull();
+  });
+});
+
+describe('needsAuth', () => {
+  it('requires session resolution on the admin surface', () => {
+    expect(needsAuth('/admin')).toBe(true);
+    expect(needsAuth('/admin/anything')).toBe(true);
+    expect(needsAuth('/login')).toBe(true);
+  });
+  it('requires session resolution on all API routes', () => {
+    expect(needsAuth('/api/profile/offers')).toBe(true);
+    expect(needsAuth('/api/schools')).toBe(true);
+    expect(needsAuth('/api/auth/logout')).toBe(true);
+  });
+  it('skips session resolution on public pages (no per-view auth round trip)', () => {
+    expect(needsAuth('/')).toBe(false);
+    expect(needsAuth('/s/tyler-baleno')).toBe(false);
+    expect(needsAuth('/preview/bare')).toBe(false);
+  });
+  it('does not treat lookalike prefixes as protected', () => {
+    expect(needsAuth('/administration')).toBe(false);
+    expect(needsAuth('/apifoo')).toBe(false);
   });
 });

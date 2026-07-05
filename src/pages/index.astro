@@ -18,6 +18,10 @@ const offers = await resolveOffers(profile.offers);
 const { theme, arrangement } = getSiteConfig(slug);
 const t = await getTheme(theme);
 const panels = buildPanelList({ player, profile, offers }, arrangement, cardVisibility);
+
+// Public page: let Vercel's CDN serve it. Athlete edits show within a minute;
+// most recruiter views never touch Supabase.
+Astro.response.headers.set('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
 ---
 
 <ThemeRender theme={t} panels={panels} player={player} />
