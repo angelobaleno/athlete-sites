@@ -91,7 +91,9 @@ Each component satisfies the Layer-1 contract for its panel and is otherwise fre
 **Shared headless helpers** (formatting, embed parsing, offer resolution) live in `src/lib/` and are imported by theme components. No *visual* helper is shared.
 
 ### Theme resolution
-The athlete record gains a `theme` key (e.g. `'tyler'`). The engine maps it to `src/themes/<theme>/`. Unknown/missing theme is a hard error (fail loud, never silently fall back to another athlete's look).
+> **Implementation correction (2026-07-05):** theme lives in the **repo-side `src/lib/site-config.ts`**, NOT on the athlete's DB record as this paragraph originally said. Deliberate: the athlete row is (partially) athlete-writable, so a DB-side theme key would put a design field within athlete reach — exactly what this spec forbids. Additionally, production routes import their theme **statically** (one route file per athlete under `src/pages/s/`) because Astro links every stylesheet reachable from a route; the dynamic registry is dev/preview-only. Do not "fix" theme back into the DB.
+
+The engine maps the config's theme name to `src/themes/<theme>/`. Unknown/missing theme is a hard error (fail loud, never silently fall back to another athlete's look).
 
 ---
 

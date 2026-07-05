@@ -64,30 +64,23 @@ const { player, headline } = Astro.props;
 </section>
 ```
 
-## Step 3: Register the theme
+## Step 3: Register the theme for dev preview
 
-Add your theme to the themes registry so the engine can find it.
-
-Edit `src/themes/registry.ts` and import your new theme:
+The registry (`src/themes/registry.ts`) exists **only** for the dev `/preview`
+route — production routes import themes statically (Step 5a). Add a dev-gated
+loader inside the existing `if (import.meta.env.DEV)` block:
 
 ```typescript
-import type { ThemeComponents } from './types';
-import { tylerTheme } from './tyler';
-import { bareTheme } from './bare';
-import { <name>Theme } from './<name>';  // Add this line
-
-const themes: Record<string, ThemeComponents> = {
-  tyler: tylerTheme,
-  bare: bareTheme,
-  <name>: <name>Theme,  // Add this line
-};
-
-export function getTheme(name: string): ThemeComponents {
-  const t = themes[name];
-  if (!t) throw new Error(`Unknown theme "${name}"`);
-  return t;
+if (import.meta.env.DEV) {
+  loaders.tyler = async () => (await import('./tyler')).tylerTheme;
+  loaders.bare = async () => (await import('./bare')).bareTheme;
+  loaders.<name> = async () => (await import('./<name>')).<name>Theme;  // Add this line
 }
 ```
+
+Never register a theme outside the DEV block: a theme owns global `body`/`:root`
+CSS that Astro cannot scope, so any route that can reach two themes ships both
+themes' CSS. Production isolation comes from static imports, one theme per route.
 
 Then in `src/themes/<name>/index.ts`, export your theme exactly as shown in `bare`:
 
@@ -130,10 +123,17 @@ Once your theme is polished, assign it to an athlete by editing `src/lib/site-co
 
 ```typescript
 const siteConfigs: Record<string, SiteConfig> = {
-  'tyler-baleno': { theme: 'tyler', arrangement: [...DEFAULT_ARRANGEMENT] },
-  '<athlete-slug>': { theme: '<name>', arrangement: [...DEFAULT_ARRANGEMENT] },  // Add this
+  'tyler-baleno': { theme: 'tyler', arrangement: [...DEFAULT_ARRANGEMENT], domains: ['tylerbaleno.com'] },
+  '<athlete-slug>': { theme: '<name>', arrangement: [...DEFAULT_ARRANGEMENT], domains: [] },  // Add this
 };
 ```
+
+### Step 5a: Create the athlete's production route
+
+Copy `src/pages/s/tyler-baleno.astro` to `src/pages/s/<athlete-slug>.astro` and
+change the slug string and the theme import. The **static** import is the
+CSS-isolation mechanism — see `docs/NEW-ATHLETE.md` for the full onboarding
+runbook (data row, login, domain, verification).
 
 Replace `<athlete-slug>` with the athlete's slug (e.g., `morgan-jones`, `casey-smith`).
 
@@ -156,7 +156,7 @@ Build the production site and view the athlete's live page:
 npm run build
 ```
 
-Open the athlete's site (e.g., `http://localhost:4321/<athlete-slug>` after serving the built files) to confirm the theme renders correctly with their real content and no console errors.
+Open the athlete's site at `/s/<athlete-slug>` to confirm the theme renders correctly with their real content and no console errors — and open every OTHER athlete's `/s/<slug>` to confirm nothing about their sites changed.
 
 ---
 
@@ -166,3 +166,5 @@ Open the athlete's site (e.g., `http://localhost:4321/<athlete-slug>` after serv
 - **Theme and arrangement are repo-side only.** Angelo edits `src/lib/site-config.ts` to set an athlete's theme and panel order. Athletes cannot change these.
 - **Athletes control content and visibility only.** Athletes edit an athlete's name, stats, offers, schedule, etc., and toggle cards on/off via the admin UI. They cannot edit theme name, arrangement, or any design elements.
 - **Themes are self-contained.** Every theme folder holds all its own CSS, typography, and layout logic. Never import components or styles from another theme folder.
+- **Placeholders render as placeholders — never as fake values.** Every `Stat` and `Field` value must render through `phValue` from `src/lib/display.ts` (em dash for flagged-and-empty), and placeholder rows should get a visibly muted treatment (see `is-placeholder` in the tyler theme). A theme that prints an empty string — or worse, a made-up default — for a missing measurable can hurt a real recruit. This is a data-integrity rule, not a style choice.
+- **Asset paths go through `assetUrl`** (`src/lib/display.ts`). It passes absolute URLs (school logos, Storage photos) through untouched and joins repo-relative paths under the site base. Hand-rolled `${base}/${path}` joins corrupt `https://` URLs.
