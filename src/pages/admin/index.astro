@@ -2,8 +2,10 @@
 import Admin from '../../layouts/Admin.astro';
 import LogoutButton from '../../components/admin/LogoutButton.tsx';
 import SectionEditor from '../../components/admin/SectionEditor.tsx';
+import OffersEditor from '../../components/admin/OffersEditor.tsx';
 import { getOwnedAthlete } from '../../lib/athlete-admin';
 import { SECTIONS, sectionFieldViews } from '../../lib/profile-sections';
+import { resolveOffers } from '../../lib/athlete';
 export const prerender = false;
 
 // Middleware guarantees a user here, but guard defensively.
@@ -19,6 +21,8 @@ const editors = record
       fields: sectionFieldViews(def, record.profile[def.key]),
     }))
   : [];
+
+const offers = record ? await resolveOffers(record.profile.offers) : [];
 ---
 <Admin title="Dashboard">
   <header class="admin-header">
@@ -32,9 +36,12 @@ const editors = record
   <p><a href="/" class="view-site">View my public site →</a></p>
 
   {record ? (
-    editors.map((e) => (
-      <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
-    ))
+    <>
+      {editors.map((e) => (
+        <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
+      ))}
+      <OffersEditor client:load offers={offers} />
+    </>
   ) : (
     <p class="no-record">No editable record is linked to this account yet.</p>
   )}
