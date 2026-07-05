@@ -1,16 +1,18 @@
 import { useState } from 'preact/hooks';
-import { moveOffer } from '../../lib/offers-admin';
-import type { Offer, School } from '../../lib/types';
+import { moveOffer, type OfferRow } from '../../lib/offers-admin';
+import type { School } from '../../lib/types';
 import './OffersEditor.css';
 
 type Status = { kind: 'idle' | 'saved' } | { kind: 'error'; msg: string };
 
-// Display label helpers — offers arrive resolved (schoolId offers carry school/level/etc).
-const label = (o: Offer) => o.school ?? '(unnamed school)';
-const sub = (o: Offer) => [o.level, o.location].filter(Boolean).join(' · ');
+const subOf = (level?: string | null, location?: string | null) =>
+  [level, location].filter(Boolean).join(' · ');
 
-export default function OffersEditor({ offers: initial }: { offers: Offer[] }) {
-  const [offers, setOffers] = useState<Offer[]>(initial);
+// Rows carry the RAW offer (what save posts) + display text. Picker adds stay
+// bare {schoolId} so the public site keeps resolving live school-table data;
+// hand-set overrides already on an offer round-trip untouched.
+export default function OffersEditor({ rows: initial }: { rows: OfferRow[] }) {
+  const [rows, setRows] = useState<OfferRow[]>(initial);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<School[]>([]);
   const [showManual, setShowManual] = useState(false);
@@ -28,29 +30,30 @@ export default function OffersEditor({ offers: initial }: { offers: Offer[] }) {
   }
 
   function addSchool(s: School) {
-    setOffers((prev) => [...prev, {
-      schoolId: s.id, school: s.name, short: s.short,
-      level: s.level, location: s.location ?? '', logoUrl: s.logoUrl ?? undefined,
+    setRows((prev) => [...prev, {
+      offer: { schoolId: s.id }, label: s.name, sub: subOf(s.level, s.location),
     }]);
     setQuery(''); setResults([]); dirty();
   }
 
   function addManual() {
     if (manual.school.trim() === '') return;
-    setOffers((prev) => [...prev, { ...manual }]);
+    setRows((prev) => [...prev, {
+      offer: { ...manual }, label: manual.school, sub: subOf(manual.level, manual.location),
+    }]);
     setManual({ school: '', short: '', level: '', location: '' });
     setShowManual(false); dirty();
   }
 
-  function remove(i: number) { setOffers((prev) => prev.filter((_, idx) => idx !== i)); dirty(); }
-  function move(i: number, dir: 'up' | 'down') { setOffers((prev) => moveOffer(prev, i, dir)); dirty(); }
+  function remove(i: number) { setRows((prev) => prev.filter((_, idx) => idx !== i)); dirty(); }
+  function move(i: number, dir: 'up' | 'down') { setRows((prev) => moveOffer(prev, i, dir)); dirty(); }
 
   async function save(e: Event) {
     e.preventDefault();
     setBusy(true); setStatus({ kind: 'idle' });
     const res = await fetch('/api/profile/offers', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ offers }),
+      body: JSON.stringify({ offers: rows.map((r) => r.offer) }),
     }).catch(() => null);
     setBusy(false);
     if (res && res.ok) { setStatus({ kind: 'saved' }); return; }
@@ -66,23 +69,23 @@ export default function OffersEditor({ offers: initial }: { offers: Offer[] }) {
       </div>
 
       <ul class="oe__list">
-        {offers.map((o, i) => (
-          <li class="oe__row" key={`${o.schoolId ?? o.school}-${i}`}>
+        {rows.map((r, i) => (
+          <li class="oe__row" key={`${r.offer.schoolId ?? r.label}-${i}`}>
             <div class="oe__info">
-              <span class="oe__school">{label(o)}</span>
-              <span class="oe__sub">{sub(o)}</span>
+              <span class="oe__school">{r.label}</span>
+              <span class="oe__sub">{r.sub}</span>
             </div>
             <div class="oe__ctrls">
               <button type="button" class="oe__btn" title="Move up" disabled={i === 0}
                 onClick={() => move(i, 'up')}>↑</button>
-              <button type="button" class="oe__btn" title="Move down" disabled={i === offers.length - 1}
+              <button type="button" class="oe__btn" title="Move down" disabled={i === rows.length - 1}
                 onClick={() => move(i, 'down')}>↓</button>
               <button type="button" class="oe__btn oe__btn--rm" title="Remove"
                 onClick={() => remove(i)}>✕</button>
             </div>
           </li>
         ))}
-        {offers.length === 0 && <li class="oe__empty">No offers yet.</li>}
+        {rows.length === 0 && <li class="oe__empty">No offers yet.</li>}
       </ul>
 
       <div class="oe__add">

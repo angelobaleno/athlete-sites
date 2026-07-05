@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { validateOffers, moveOffer } from '../../src/lib/offers-admin';
+import { validateOffers, moveOffer, offerRows } from '../../src/lib/offers-admin';
 import type { Offer } from '../../src/lib/types';
 
 describe('validateOffers', () => {
@@ -61,5 +61,26 @@ describe('moveOffer', () => {
   });
   it('does not mutate the input', () => {
     const arr = [a, b, c]; moveOffer(arr, 1, 'up'); expect(arr).toEqual([a, b, c]);
+  });
+});
+
+describe('offerRows', () => {
+  it('pairs each RAW offer with display text from its resolved twin', () => {
+    const raw: Offer[] = [{ schoolId: 'rmu', level: 'NCAA Division I · FCS' }];
+    const resolved: Offer[] = [{
+      schoolId: 'rmu', school: 'Robert Morris', short: 'RMU',
+      level: 'NCAA Division I · FCS', location: 'Moon Township, PA',
+    }];
+    expect(offerRows(raw, resolved)).toEqual([{
+      offer: { schoolId: 'rmu', level: 'NCAA Division I · FCS' },
+      label: 'Robert Morris',
+      sub: 'NCAA Division I · FCS · Moon Township, PA',
+    }]);
+  });
+  it('labels an unresolvable offer clearly instead of hiding it', () => {
+    const raw: Offer[] = [{ schoolId: 'dangling' }];
+    expect(offerRows(raw, raw)).toEqual([{
+      offer: { schoolId: 'dangling' }, label: '(unknown school)', sub: '',
+    }]);
   });
 });

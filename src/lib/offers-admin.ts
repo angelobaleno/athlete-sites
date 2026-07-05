@@ -38,7 +38,24 @@ export function validateOffers(input: unknown): { offers: Offer[] } | { error: s
   return { offers };
 }
 
-export function moveOffer(offers: Offer[], index: number, dir: 'up' | 'down'): Offer[] {
+/**
+ * One editor row: the RAW offer (what save posts — overrides only, never
+ * table-resolved fields) plus display text derived from its resolved twin.
+ */
+export interface OfferRow { offer: Offer; label: string; sub: string; }
+
+export function offerRows(raw: Offer[], resolved: Offer[]): OfferRow[] {
+  return raw.map((offer, i) => {
+    const r = resolved[i] ?? offer;
+    return {
+      offer,
+      label: r.school ?? '(unknown school)',
+      sub: [r.level, r.location].filter(Boolean).join(' · '),
+    };
+  });
+}
+
+export function moveOffer<T>(offers: T[], index: number, dir: 'up' | 'down'): T[] {
   const next = [...offers];
   const target = dir === 'up' ? index - 1 : index + 1;
   if (index < 0 || index >= next.length || target < 0 || target >= next.length) return next;

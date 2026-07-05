@@ -4,6 +4,7 @@ import LogoutButton from '../../components/admin/LogoutButton.tsx';
 import SectionEditor from '../../components/admin/SectionEditor.tsx';
 import OffersEditor from '../../components/admin/OffersEditor.tsx';
 import { getOwnedAthlete } from '../../lib/athlete-admin';
+import { offerRows } from '../../lib/offers-admin';
 import { SECTIONS, sectionFieldViews } from '../../lib/profile-sections';
 import { resolveOffers } from '../../lib/athlete';
 export const prerender = false;
@@ -22,7 +23,11 @@ const editors = record
     }))
   : [];
 
-const offers = record ? await resolveOffers(record.profile.offers) : [];
+// Raw offers are what the editor saves back; the resolved twins only feed labels —
+// so a save can't freeze school-table data or wipe hand-set overrides.
+const rows = record
+  ? offerRows(record.profile.offers, await resolveOffers(record.profile.offers))
+  : [];
 ---
 <Admin title="Dashboard">
   <header class="admin-header">
@@ -40,7 +45,7 @@ const offers = record ? await resolveOffers(record.profile.offers) : [];
       {editors.map((e) => (
         <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
       ))}
-      <OffersEditor client:load offers={offers} />
+      <OffersEditor client:load rows={rows} />
     </>
   ) : (
     <p class="no-record">No editable record is linked to this account yet.</p>
