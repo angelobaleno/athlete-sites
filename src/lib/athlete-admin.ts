@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { AthleteProfile, AthleteRecord } from './types';
+import type { AthleteProfile, AthleteRecord, Offer } from './types';
 import { SECTIONS, applySectionValues, type SectionKey } from './profile-sections';
 
 /** Read the athlete row owned by this user (RLS-safe: owner reads own row). */
@@ -40,6 +40,22 @@ export async function saveProfileSection(
   if ('error' in applied) return { error: applied.error };
 
   const nextProfile = { ...profile, [key]: applied.data };
+  const { data: updated, error: writeErr } = await supabase
+    .from('athletes').update({ profile: nextProfile }).eq('id', athleteId).select('id');
+  if (writeErr) return { error: writeErr.message };
+  if (!updated || updated.length === 0) return { error: 'Not authorized to edit this record' };
+  return { ok: true };
+}
+
+export async function saveOffers(
+  supabase: SupabaseClient, athleteId: string, offers: Offer[],
+): Promise<{ ok: true } | { error: string }> {
+  const { data: row, error: readErr } = await supabase
+    .from('athletes').select('profile').eq('id', athleteId).maybeSingle();
+  if (readErr) return { error: readErr.message };
+  if (!row) return { error: 'Record not found' };
+
+  const nextProfile = { ...(row.profile as AthleteProfile), offers };
   const { data: updated, error: writeErr } = await supabase
     .from('athletes').update({ profile: nextProfile }).eq('id', athleteId).select('id');
   if (writeErr) return { error: writeErr.message };
