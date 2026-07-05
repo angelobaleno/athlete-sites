@@ -78,7 +78,7 @@ export function getPath(obj: unknown, path: string): string {
   return cur == null ? '' : String(cur);
 }
 
-export function setPath<T>(obj: T, path: string, value: string): T {
+export function setPath<T>(obj: T, path: string, value: unknown): T {
   const clone: unknown = Array.isArray(obj) ? [...(obj as unknown[])] : { ...(obj as object) };
   const parts = segs(path);
   let cur = clone as Record<string, unknown>;
@@ -147,7 +147,7 @@ export function applySectionValues(
     }
     if (f.placeholderPath) {
       const v = getPath(data, f.path);
-      data = setPath(data, f.placeholderPath, v.trim() === '' ? (true as unknown as string) : (false as unknown as string));
+      data = setPath(data, f.placeholderPath, v.trim() === '');
     }
   }
   return { data };

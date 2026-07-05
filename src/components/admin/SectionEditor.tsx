@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
+import type { FieldView } from '../../lib/profile-sections';
 import './SectionEditor.css';
 
-interface FieldView { name: string; label: string; kind: 'text' | 'url'; value: string; required: boolean }
 type Status = { kind: 'idle' | 'saved' } | { kind: 'error'; msg: string };
 
 export default function SectionEditor(

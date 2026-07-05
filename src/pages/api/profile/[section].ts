@@ -18,6 +18,9 @@ export const POST: APIRoute = async (context) => {
   if (typeof values !== 'object' || values === null) {
     return json({ error: 'Missing values' }, 400);
   }
+  if (Object.values(values).some((v) => typeof v !== 'string')) {
+    return json({ error: 'Invalid values' }, 400);
+  }
 
   const record = await getOwnedAthlete(context.locals.supabase, user.id);
   if (!record) return json({ error: 'No editable record for this account' }, 404);

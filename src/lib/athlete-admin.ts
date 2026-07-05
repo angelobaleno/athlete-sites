@@ -36,7 +36,7 @@ export async function saveProfileSection(
   if (!row) return { error: 'Record not found' };
 
   const profile = row.profile as AthleteProfile;
-  const applied = applySectionValues(def, (profile as unknown as Record<string, unknown>)[key], values);
+  const applied = applySectionValues(def, profile[key], values);
   if ('error' in applied) return { error: applied.error };
 
   const nextProfile = { ...profile, [key]: applied.data };
