@@ -1,20 +1,24 @@
 import type { ThemeComponents } from './types';
 
 /**
- * Theme registry — lazy by design.
+ * Theme registry.
  *
- * Each theme is a TOTAL overhaul that owns its own global CSS (body/:root styles
- * Astro cannot scope). If we statically imported every theme, every page would
- * bundle every theme's global CSS and the inactive themes' `body {}` rules would
- * leak onto the active page. So we load ONLY the requested theme, on demand — the
- * inactive themes' modules (and their CSS) never enter the page.
+ * A theme owns global `body`/`:root` styles that Astro CANNOT scope. Astro links
+ * every stylesheet reachable from a route (dynamic imports included), so any theme
+ * reachable from a page leaks its global CSS onto that page. `tyler` is the only
+ * real, shipped theme; `bare` is a dev-only demonstrator used by the `/preview`
+ * route. We register `bare` ONLY in dev so it is tree-shaken out of production
+ * builds — its module and CSS never reach the live site.
  *
- * To register a theme: add a loader here. Nothing else imports theme modules.
+ * To register a real (shipped) theme: add a loader to `loaders`.
  */
 const loaders: Record<string, () => Promise<ThemeComponents>> = {
   tyler: async () => (await import('./tyler')).tylerTheme,
-  bare: async () => (await import('./bare')).bareTheme,
 };
+
+if (import.meta.env.DEV) {
+  loaders.bare = async () => (await import('./bare')).bareTheme;
+}
 
 export async function getTheme(name: string): Promise<ThemeComponents> {
   const load = loaders[name];
