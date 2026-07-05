@@ -1,11 +1,24 @@
 ---
 import Admin from '../../layouts/Admin.astro';
 import LogoutButton from '../../components/admin/LogoutButton.tsx';
+import SectionEditor from '../../components/admin/SectionEditor.tsx';
+import { getOwnedAthlete } from '../../lib/athlete-admin';
+import { SECTIONS, sectionFieldViews } from '../../lib/profile-sections';
 export const prerender = false;
 
 // Middleware guarantees a user here, but guard defensively.
 const user = Astro.locals.user;
 if (!user) return Astro.redirect('/login');
+
+const record = await getOwnedAthlete(Astro.locals.supabase, user.id);
+
+const editors = record
+  ? SECTIONS.map((def) => ({
+      section: def.key,
+      title: def.title,
+      fields: sectionFieldViews(def, record.profile[def.key]),
+    }))
+  : [];
 ---
 <Admin title="Dashboard">
   <header class="admin-header">
@@ -15,13 +28,22 @@ if (!user) return Astro.redirect('/login');
     </div>
     <LogoutButton client:load />
   </header>
-  <p class="coming-soon">Content editors are coming next. For now you can sign in and out.</p>
+
   <p><a href="/" class="view-site">View my public site →</a></p>
+
+  {record ? (
+    editors.map((e) => (
+      <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
+    ))
+  ) : (
+    <p class="no-record">No editable record is linked to this account yet.</p>
+  )}
+
   <style>
     .admin-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
     h1 { font-family: var(--display); }
     .signed-in { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0 0; }
-    .coming-soon { color: var(--muted); margin-top: 2rem; }
     .view-site { color: var(--gold); }
+    .no-record { color: var(--muted); margin-top: 2rem; }
   </style>
 </Admin>
