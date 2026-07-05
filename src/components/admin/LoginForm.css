@@ -10,4 +10,4 @@
 }
 .login-form button:hover { background: var(--a-accent-hi); }
 .login-form button:disabled { opacity: 0.6; cursor: default; }
-.login-error { color: #ef6b6b; font-size: 0.85rem; margin: 0; }
+.login-error { color: var(--a-danger); font-size: 0.85rem; margin: 0; }
