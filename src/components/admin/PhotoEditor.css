@@ -1,0 +1,25 @@
+.photo-editor { border: 1px solid var(--a-line); background: var(--a-surface);
+  border-radius: var(--a-radius); padding: 1.4rem 1.5rem; margin-top: 1.5rem; }
+.pe__head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.pe__title { font-family: var(--a-display); font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.02em; font-size: 1.3rem; }
+.pe__actions { display: flex; gap: 0.5rem; }
+.pe__btn { font-family: var(--a-display); font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; font-size: 0.85rem; color: var(--a-bg); background: var(--a-accent);
+  border: none; border-radius: var(--a-radius); padding: 0.5rem 1.1rem; cursor: pointer;
+  display: inline-block; }
+.pe__btn:disabled { opacity: 0.6; cursor: default; }
+.pe__btn--ghost { background: transparent; border: 1px solid var(--a-line); color: var(--a-text); }
+.pe__pick { position: relative; overflow: hidden; }
+.pe__file { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+/* Fixed frame at the theme's hero ratio — preview and cropper share it, so
+   entering crop mode never shifts the layout. */
+.pe__media { margin-top: 1.2rem; width: min(320px, 100%); max-height: 420px;
+  background: var(--a-surface-2); border: 1px solid var(--a-line);
+  border-radius: var(--a-radius); overflow: hidden; display: grid; place-items: center; }
+.pe__preview, .pe__crop-src { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pe__crop-src { max-width: 100%; }
+.pe__empty { color: var(--a-muted); font-size: 0.9rem; }
+.pe__status { min-height: 1.2rem; margin-top: 1rem; font-size: 0.85rem; }
+.pe__status--saved { color: var(--a-accent); }
+.pe__status--error { color: var(--a-danger); }
