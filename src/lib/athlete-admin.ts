@@ -48,6 +48,17 @@ export async function saveProfileSection(
   return { ok: true };
 }
 
+/** Set the owner's hero photo URL. RLS + the column grant are the boundary. */
+export async function savePhotoUrl(
+  supabase: SupabaseClient, athleteId: string, photoUrl: string,
+): Promise<{ ok: true } | { error: string }> {
+  const { data: updated, error } = await supabase
+    .from('athletes').update({ photo_url: photoUrl }).eq('id', athleteId).select('id');
+  if (error) return { error: error.message };
+  if (!updated || updated.length === 0) return { error: 'Not authorized to edit this record' };
+  return { ok: true };
+}
+
 export async function saveOffers(
   supabase: SupabaseClient, athleteId: string, offers: Offer[],
 ): Promise<{ ok: true } | { error: string }> {
