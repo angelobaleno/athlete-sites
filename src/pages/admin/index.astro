@@ -33,15 +33,19 @@ const rows = record
   ? offerRows(record.profile.offers, await resolveOffers(record.profile.offers))
   : [];
 
-// The cropper frames to the athlete's THEME-declared hero ratio (CSS-free
-// meta.ts — importing the theme barrel here would leak its CSS onto /admin).
-const heroRatio = record
-  ? getThemeMeta(getSiteConfig(record.slug).theme).heroPhotoAspectRatio
-  : 1;
+// The athlete's theme manifest (CSS-free meta.ts — importing the theme barrel
+// here would leak its CSS onto /admin). Drives both the cropper frame and the
+// admin's brand palette, so /admin wears the athlete's own site colors.
+const meta = record ? getThemeMeta(getSiteConfig(record.slug).theme) : null;
+const heroRatio = meta?.heroPhotoAspectRatio ?? 1;
+const brand = meta?.brand;
+const athleteName = record
+  ? `${record.profile.identity.first} ${record.profile.identity.last}`.trim()
+  : undefined;
 // Storage URLs pass through; legacy repo-relative paths get the site base.
 const heroPhotoUrl = record?.photoUrl ? assetUrl(record.photoUrl, import.meta.env.BASE_URL) : null;
 ---
-<Admin title="Dashboard">
+<Admin title="Dashboard" brand={brand} name={athleteName}>
   <header class="admin-header">
     <div>
       <h1>Your Dashboard</h1>

@@ -8,6 +8,19 @@ import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 export interface ThemeMeta {
   /** width/height of the hero photo frame, e.g. 4/5 for portrait. */
   heroPhotoAspectRatio: number;
+  /** The athlete's colors, so their /admin wears their site's brand. */
+  brand: ThemeBrand;
+}
+
+/**
+ * A theme's admin color palette — the values behind the admin's `--a-*` tokens.
+ * COLORS ONLY on purpose: fonts and radius stay shared, so every athlete's admin
+ * has one consistent shape and only its color changes. These are DATA (no CSS),
+ * so the admin can adopt them without importing the theme's stylesheet.
+ */
+export interface ThemeBrand {
+  bg: string; surface: string; surface2: string; line: string;
+  text: string; muted: string; accent: string; accentHi: string; danger: string;
 }
 
 /** Every theme must export exactly these. */

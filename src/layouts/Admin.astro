@@ -1,14 +1,21 @@
 ---
 import './admin.css';
-interface Props { title?: string; }
-const { title = 'Admin' } = Astro.props;
+import { brandStyle } from '../lib/admin-brand';
+import type { ThemeBrand } from '../themes/types';
+interface Props { title?: string; brand?: ThemeBrand; name?: string; }
+const { title = 'Admin', brand, name } = Astro.props;
+// Inline the athlete's palette onto <html> so it overrides admin.css :root
+// (no theme CSS is imported — this is just color data). Pre-auth pages (login)
+// pass no brand and keep the neutral default.
+const rootStyle = brand ? brandStyle(brand) : undefined;
+const suffix = name ? ` · ${name}` : '';
 ---
-<html lang="en">
+<html lang="en" style={rootStyle}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
-    <title>{title} · Tyler Baleno</title>
+    <title>{title}{suffix}</title>
   </head>
   <body class="admin-body">
     <main class="admin-main">
