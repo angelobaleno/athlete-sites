@@ -4,6 +4,7 @@ import LogoutButton from '../../components/admin/LogoutButton.tsx';
 import SectionEditor from '../../components/admin/SectionEditor.tsx';
 import OffersEditor from '../../components/admin/OffersEditor.tsx';
 import PhotoEditor from '../../components/admin/PhotoEditor.tsx';
+import AdminConsole from '../../components/admin/AdminConsole.tsx';
 import { getOwnedAthlete } from '../../lib/athlete-admin';
 import { offerRows } from '../../lib/offers-admin';
 import { SECTIONS, sectionFieldViews } from '../../lib/profile-sections';
@@ -11,13 +12,21 @@ import { resolveOffers } from '../../lib/athlete';
 import { getSiteConfig } from '../../lib/site-config';
 import { getThemeMeta } from '../../themes/meta';
 import { assetUrl } from '../../lib/display';
+import { isAdmin } from '../../lib/admin-guard';
+import { createAdminClient } from '../../lib/supabase-admin';
+import { listAthletes } from '../../lib/admin-actions';
 export const prerender = false;
 
 // Middleware guarantees a user here, but guard defensively.
 const user = Astro.locals.user;
 if (!user) return Astro.redirect('/login');
 
-const record = await getOwnedAthlete(Astro.locals.supabase, user.id);
+// The platform admin gets the login-management console; everyone else gets their
+// own athlete editor. An admin owns no athlete record (hence no editor to show).
+const admin = isAdmin(user.id);
+const athletes = admin ? await listAthletes(createAdminClient()) : [];
+
+const record = admin ? null : await getOwnedAthlete(Astro.locals.supabase, user.id);
 
 const editors = record
   ? SECTIONS.map((def) => ({
@@ -45,34 +54,49 @@ const athleteName = record
 // Storage URLs pass through; legacy repo-relative paths get the site base.
 const heroPhotoUrl = record?.photoUrl ? assetUrl(record.photoUrl, import.meta.env.BASE_URL) : null;
 ---
-<Admin title="Dashboard" brand={brand} name={athleteName}>
-  <header class="admin-header">
-    <div>
-      <h1>Your Dashboard</h1>
-      <p class="signed-in">Signed in as {user.email}</p>
-    </div>
-    <LogoutButton client:load />
-  </header>
+{admin ? (
+  <Admin title="Admin" name={user.email}>
+    <header class="admin-header">
+      <div>
+        <h1>Athlete Logins</h1>
+        <p class="signed-in">Signed in as {user.email}</p>
+      </div>
+      <LogoutButton client:load />
+    </header>
+    <p class="admin-blurb">Invite an athlete to their site, send a password reset, or set a temporary password — no Supabase needed.</p>
+    <AdminConsole client:load athletes={athletes} />
+  </Admin>
+) : (
+  <Admin title="Dashboard" brand={brand} name={athleteName}>
+    <header class="admin-header">
+      <div>
+        <h1>Your Dashboard</h1>
+        <p class="signed-in">Signed in as {user.email}</p>
+      </div>
+      <LogoutButton client:load />
+    </header>
 
-  <p><a href="/" class="view-site">View my public site →</a></p>
+    <p><a href="/" class="view-site">View my public site →</a></p>
 
-  {record ? (
-    <>
-      {editors.map((e) => (
-        <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
-      ))}
-      <OffersEditor client:load rows={rows} />
-      <PhotoEditor client:load photoUrl={heroPhotoUrl} aspectRatio={heroRatio} />
-    </>
-  ) : (
-    <p class="no-record">No editable record is linked to this account yet.</p>
-  )}
+    {record ? (
+      <>
+        {editors.map((e) => (
+          <SectionEditor client:load section={e.section} title={e.title} fields={e.fields} />
+        ))}
+        <OffersEditor client:load rows={rows} />
+        <PhotoEditor client:load photoUrl={heroPhotoUrl} aspectRatio={heroRatio} />
+      </>
+    ) : (
+      <p class="no-record">No editable record is linked to this account yet.</p>
+    )}
+  </Admin>
+)}
 
-  <style>
-    .admin-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
-    h1 { font-family: var(--a-display); }
-    .signed-in { color: var(--a-muted); font-size: 0.85rem; margin: 0.25rem 0 0; }
-    .view-site { color: var(--a-accent); }
-    .no-record { color: var(--a-muted); margin-top: 2rem; }
-  </style>
-</Admin>
+<style>
+  .admin-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  h1 { font-family: var(--a-display); }
+  .signed-in { color: var(--a-muted); font-size: 0.85rem; margin: 0.25rem 0 0; }
+  .admin-blurb { color: var(--a-muted); font-size: 0.9rem; margin: 0 0 1.25rem; }
+  .view-site { color: var(--a-accent); }
+  .no-record { color: var(--a-muted); margin-top: 2rem; }
+</style>

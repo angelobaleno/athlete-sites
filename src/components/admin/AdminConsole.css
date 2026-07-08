@@ -1,0 +1,14 @@
+.admin-console { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.admin-console th, .admin-console td {
+  text-align: left; padding: 0.7rem 0.6rem; vertical-align: middle;
+  border-bottom: 1px solid var(--a-border, rgba(255,255,255,.1));
+}
+.admin-console th {
+  font-family: var(--a-display); text-transform: uppercase; letter-spacing: .08em;
+  font-size: .7rem; color: var(--a-muted);
+}
+.admin-console .slug { color: var(--a-muted); margin-left: .4rem; font-size: .8rem; }
+.admin-console input { width: 100%; max-width: 15rem; padding: .4rem .5rem; }
+.admin-console .actions { display: flex; gap: .4rem; flex-wrap: wrap; }
+/* reserved space so a status message never shifts the row */
+.admin-console .status { display: inline-block; min-width: 12rem; min-height: 1.2em; color: var(--a-accent); }
