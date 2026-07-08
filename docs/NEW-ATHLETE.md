@@ -88,31 +88,33 @@ the DB, so athletes can't reach it.
 
 ## Known gaps in the login flow (read before step 2)
 
-The email-invite path (`Invite user` in the Supabase dashboard) **does not work
-yet** — two things are missing:
+The in-app auth is **built and live** (2026-07-08): `/login` → `/forgot` →
+`/auth/confirm` (consumes the invite/recovery `token_hash`) → session-gated
+`/set-password`. The Supabase Auth Site URL + redirect URLs are already set to the
+production URL. **The one thing still missing is email delivery:** invite/reset
+emails go through Supabase's default sender, which is rate-limited and unreliable to
+outside inboxes until **custom SMTP (Resend)** is configured. So the `Invite user`
+dashboard button still isn't the reliable path yet.
 
-1. **No set-password / callback route in the app.** Login is pure
-   email+password (`/api/auth/login` → `signInWithPassword`); there is no
-   forgot-password page and nothing to consume an invite/recovery token. So an
-   invite link has nowhere to land.
-2. **Supabase Auth Site URL still points at `localhost`.** Every invite/confirm
-   email it generates links to `http://localhost:4321`, which only resolves on
-   the dev machine — on the athlete's phone Safari just fails to connect. Fix in
-   Supabase Dashboard → Authentication → URL Configuration → set Site URL +
-   Redirect URLs to the production URL.
+**Until SMTP is wired, activate a login manually** (no email needed):
 
-**Until those are fixed, activate a login manually** instead of inviting:
-after `link-owner`, set a password and confirm the email via the admin API
-(`auth.admin.updateUserById(id, { password, email_confirm: true })`), then hand
-the athlete URL + email + temp password out-of-band (text/DM, not email). This
-is what was done for Tyler. The athlete can't rotate the password themselves
-until gap #1 is built — re-run the admin update to change it.
+```
+# 1. Create the auth user (Supabase Dashboard → Authentication → Add user, auto-confirm)
+#    — or it already exists from a prior invite attempt.
+# 2. Link the row to that user:
+node --env-file=.env.local scripts/link-owner.mjs <athlete-email> <slug>
+# 3. Set a known password:
+node --env-file=.env.local scripts/set-password.mjs <athlete-email> "<temp-password>"
+```
+
+Then hand the athlete the URL + email + temp password out-of-band (text/DM, not
+email). Once signed in, they can change it themselves at `/set-password` (the page
+is session-gated, so a logged-in athlete can reach it directly); to rotate it for
+them, just re-run `set-password.mjs`.
 
 ## Follow-ups that shrink this runbook
 
-- **Build a set-password / auth-callback route** so the normal email-invite flow
-  works (closes both gaps above; also gives athletes self-serve password reset).
-- Set the Supabase Auth Site URL to the production domain.
+- **Configure Resend SMTP** in Supabase so the normal email-invite + self-serve
+  reset flow delivers (the code is already built and merged).
 - `scripts/new-athlete.mjs <slug> <profile.json>` collapsing steps 1–2.
-- A promotable `scripts/activate-owner.mjs <email>` for the manual login path.
 - A route-file template if copying Tyler's ever drifts.
