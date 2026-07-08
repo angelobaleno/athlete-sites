@@ -46,10 +46,12 @@ When `tylerbaleno.com` is bought:
 3. DNS at the registrar per Vercel's instructions; verify HTTPS + apex/www + mobile.
 
 ## Status / next
-- **Done:** data seeded, theme built, route live on Vercel, login activated (manual), self-serve
-  set-password + reset flow merged to master + verified live (2026-07-08).
-- **Next (his own control):** (1) configure Resend SMTP in Supabase so reset/invite emails actually
-  deliver; (2) buy `tylerbaleno.com`, then the domain step above; (3) a 15-min onboarding so he logs in,
-  edits one real thing, and pins the link in his X bio.
+- **Done (2026-07-08):** data seeded, theme built, route live on Vercel; self-serve set-password + reset
+  merged + verified; email fully live via verified `send.angelobaleno.com` (inbox delivery confirmed);
+  in-app `/admin` console shipped for login management.
+- **Next (his own control):** (1) set `ADMIN_USER_IDS=b9f8cd6a-76cf-4271-aca5-328c999f0b3e` in Vercel
+  Production env + redeploy, so `/admin` shows Angelo the console (else he sees the athlete dashboard);
+  (2) buy `tylerbaleno.com` for Tyler's custom site URL, then the domain step above; (3) 15-min onboarding
+  so Tyler logs in, edits one real thing, and pins the link in his X bio.
 
 Related: `docs/NEW-ATHLETE.md`, `MARKETING.md`, `BUSINESS.md`.

@@ -43,6 +43,7 @@ Two lanes, matching the architecture:
 
 1. **Tyler's launch moment (free, first).** Site link pinned in his X bio + a launch graphic Angelo designs that Tyler posts. Recruits follow recruits; WPIAL sees it in days. Ask Tyler directly for the 3 teammates whose parents are most invested.
 2. **Plum's coaches.** Coach Young and Coach Jacobs are already tagged in Tyler's recruiting posts. Show them the live site. A coach forwarding it to a parent group chat is worth more than any ad; one coach = a roster.
+   - *Coach-facing pitch deck built 2026-07-08* (phone-first, 7 slides, in the product's skin, anchored on Tyler's live card): https://claude.ai/code/artifact/c4661028-5c34-41fc-84b2-8fa7f3dcc636 — walk a coach through it or send the link.
 3. **Founder pricing to close #2–3 fast** (see Pricing). Manufacture the proof wall.
 4. **Post the craft on X.** Before/afters, motion clips, build threads from the design account. Athletes repost anything that makes them look good; every repost is an ad with a live demo attached.
 5. **Targeted DMs to WPIAL recruits with active offer buzz** (higher effort — after 1–4). The message, plain:
