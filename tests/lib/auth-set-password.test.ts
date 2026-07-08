@@ -24,8 +24,9 @@ describe.skipIf(!canRun)('set-password via invite token_hash (live)', () => {
       type: 'invite', email,
     });
     expect(linkErr).toBeNull();
-    userId = link!.user?.id;
-    const token_hash = link!.properties.hashed_token;
+    if (!link?.properties) throw new Error('generateLink returned no properties');
+    userId = link.user?.id;
+    const token_hash = link.properties.hashed_token;
 
     const anon = getPublicClient();
     const { data: verified, error: vErr } = await anon.auth.verifyOtp({ token_hash, type: 'invite' });
