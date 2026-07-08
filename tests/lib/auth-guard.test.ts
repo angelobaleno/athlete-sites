@@ -20,6 +20,13 @@ describe('redirectTarget', () => {
     expect(redirectTarget('/', true)).toBeNull();
     expect(redirectTarget('/login', false)).toBeNull();
   });
+
+  it('sends unauthenticated /set-password visitors to /login', () => {
+    expect(redirectTarget('/set-password', false)).toBe('/login');
+  });
+  it('lets authenticated visitors set a password (recovery session)', () => {
+    expect(redirectTarget('/set-password', true)).toBeNull();
+  });
 });
 
 describe('needsAuth', () => {
@@ -41,5 +48,12 @@ describe('needsAuth', () => {
   it('does not treat lookalike prefixes as protected', () => {
     expect(needsAuth('/administration')).toBe(false);
     expect(needsAuth('/apifoo')).toBe(false);
+  });
+  it('resolves session on the confirm + set-password routes', () => {
+    expect(needsAuth('/auth/confirm')).toBe(true);
+    expect(needsAuth('/set-password')).toBe(true);
+  });
+  it('leaves the forgot page public', () => {
+    expect(needsAuth('/forgot')).toBe(false);
   });
 });

@@ -1,0 +1,15 @@
+---
+import Admin from '../layouts/Admin.astro';
+import ForgotPasswordForm from '../components/admin/ForgotPasswordForm.tsx';
+export const prerender = false;
+---
+<Admin title="Reset password">
+  <h1>Reset your password</h1>
+  <p>Enter your email and we'll send a link to set a new password.</p>
+  <ForgotPasswordForm client:load />
+  <p><a href="/login" class="back">← Back to sign in</a></p>
+  <style>
+    h1 { font-family: var(--a-display); }
+    .back { color: var(--a-accent); }
+  </style>
+</Admin>

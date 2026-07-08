@@ -86,7 +86,33 @@ the DB, so athletes can't reach it.
 - [ ] Preview deploy: both sites; then `<domain>` resolves after DNS.
 - [ ] Invariant suite passed (it runs in `npm test` when the service key is present).
 
+## Known gaps in the login flow (read before step 2)
+
+The email-invite path (`Invite user` in the Supabase dashboard) **does not work
+yet** — two things are missing:
+
+1. **No set-password / callback route in the app.** Login is pure
+   email+password (`/api/auth/login` → `signInWithPassword`); there is no
+   forgot-password page and nothing to consume an invite/recovery token. So an
+   invite link has nowhere to land.
+2. **Supabase Auth Site URL still points at `localhost`.** Every invite/confirm
+   email it generates links to `http://localhost:4321`, which only resolves on
+   the dev machine — on the athlete's phone Safari just fails to connect. Fix in
+   Supabase Dashboard → Authentication → URL Configuration → set Site URL +
+   Redirect URLs to the production URL.
+
+**Until those are fixed, activate a login manually** instead of inviting:
+after `link-owner`, set a password and confirm the email via the admin API
+(`auth.admin.updateUserById(id, { password, email_confirm: true })`), then hand
+the athlete URL + email + temp password out-of-band (text/DM, not email). This
+is what was done for Tyler. The athlete can't rotate the password themselves
+until gap #1 is built — re-run the admin update to change it.
+
 ## Follow-ups that shrink this runbook
 
+- **Build a set-password / auth-callback route** so the normal email-invite flow
+  works (closes both gaps above; also gives athletes self-serve password reset).
+- Set the Supabase Auth Site URL to the production domain.
 - `scripts/new-athlete.mjs <slug> <profile.json>` collapsing steps 1–2.
+- A promotable `scripts/activate-owner.mjs <email>` for the manual login path.
 - A route-file template if copying Tyler's ever drifts.
