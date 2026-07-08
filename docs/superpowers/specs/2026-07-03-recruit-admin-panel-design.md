@@ -5,6 +5,8 @@
 **Built on:** Tyler Baleno recruiting site (`C:\context\Websites\Tyler Baleno`)
 **Related:** Athlete Site Starter (`C:\context\Websites\Athlete Site Starter`) — this reverses that spec's "per-athlete admin" YAGNI deferral now that the service direction is being validated.
 
+> **Update 2026-07-08 — card visibility toggles cut.** The athlete-facing "which cards display" switch is no longer part of the product. Cards already render only when they hold data and omit when empty, so a manual on/off control added maintenance surface without earning its place. Athletes edit content; show/hide is automatic. Everything below about `card_visibility` toggles is superseded by this note (the DB column stays, defaulted on, doing no harm).
+
 ## Purpose
 
 Let each recruit maintain their own site content — update stats after a game, add film, add an offer, fix contact info — and choose **which cards display**, through a friendly login-protected panel. No code, no editing files, no bugging Angelo for routine updates.

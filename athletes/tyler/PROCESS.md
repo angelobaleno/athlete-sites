@@ -20,8 +20,12 @@ This records what was actually done, not the generic steps. Update it as his sit
   handed to him out-of-band (text, not email).
 - He can log in and edit **his row only** (RLS + column grants: `profile`, `card_visibility`, `photo_url` —
   never `slug`, never theme).
-- Self-serve password reset is built on `feat/athlete-login` but **gated on custom SMTP (Resend)** — until
-  that ships, re-run the admin update to change his password.
+- Self-serve set-password + reset flow **shipped to master 2026-07-08** (PR #1 merged): `/login` now has a
+  "Forgot password?" link → `/forgot` → email → `/auth/confirm` → `/set-password`. Pages + gate verified live.
+- **Still gated on email delivery:** the reset/invite emails go through Supabase's default sender, which is
+  rate-limited and unreliable for outside addresses until **custom SMTP (Resend)** is configured in the
+  Supabase dashboard (Angelo's ops step — needs a Resend account; not a code change). Until then, the
+  reliable path to change Tyler's password is still the manual admin update.
 
 ## 3. Theme
 - Dark **"scouting card"** design in **Plum purple + gold**. Lives at `src/themes/tyler-baleno/`.
@@ -39,8 +43,10 @@ When `tylerbaleno.com` is bought:
 3. DNS at the registrar per Vercel's instructions; verify HTTPS + apex/www + mobile.
 
 ## Status / next
-- **Done:** data seeded, theme built, route live on Vercel, login activated (manual).
-- **Next (his own control):** buy `tylerbaleno.com`, then the domain step above; a 15-min onboarding
-  so he logs in, edits one real thing, and pins the link in his X bio.
+- **Done:** data seeded, theme built, route live on Vercel, login activated (manual), self-serve
+  set-password + reset flow merged to master + verified live (2026-07-08).
+- **Next (his own control):** (1) configure Resend SMTP in Supabase so reset/invite emails actually
+  deliver; (2) buy `tylerbaleno.com`, then the domain step above; (3) a 15-min onboarding so he logs in,
+  edits one real thing, and pins the link in his X bio.
 
 Related: `docs/NEW-ATHLETE.md`, `MARKETING.md`, `BUSINESS.md`.

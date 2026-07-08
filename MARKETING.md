@@ -71,5 +71,6 @@ Churn here is **structural**: a 2027 kid's recruitment ends at signing day. Plan
 | Coach-view analytics (retention) | Views table + monthly email (Vercel cron) | ~1–2 days |
 | Custom domain per athlete (Premium tier) | Done — host map + `/s/` routes + rewrite | Runbook step |
 | Offer-announcement graphics (acquisition loop) | None — design workflow, site data as input | Per-graphic |
-| Card visibility toggles (product promise: "toggle cards") | Small API + toggle row in admin | ~0.5–1 day |
 | Service pitch page at the apex domain | Replaces `index.astro` default tenant | ~1 day design |
+
+*Cut 2026-07-08: athlete-facing card visibility toggles. Cards already render only when they have data and omit when empty, so a manual on/off switch added maintenance surface without a real job. Athletes edit content; show/hide is automatic.*
