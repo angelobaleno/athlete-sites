@@ -22,10 +22,13 @@ This records what was actually done, not the generic steps. Update it as his sit
   never `slug`, never theme).
 - Self-serve set-password + reset flow **shipped to master 2026-07-08** (PR #1 merged): `/login` now has a
   "Forgot password?" link → `/forgot` → email → `/auth/confirm` → `/set-password`. Pages + gate verified live.
-- **Still gated on email delivery:** the reset/invite emails go through Supabase's default sender, which is
-  rate-limited and unreliable for outside addresses until **custom SMTP (Resend)** is configured in the
-  Supabase dashboard (Angelo's ops step — needs a Resend account; not a code change). Until then, the
-  reliable path to change Tyler's password is still the manual admin update.
+- **Email flow now WIRED + verified (2026-07-08):** custom SMTP via **Resend** configured in Supabase;
+  Invite + Reset templates edited to `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=…`.
+  Verified end-to-end: invite → email delivered → `/auth/confirm` → `/set-password` set → signed in.
+- **BUT still using Resend's test sender `onboarding@resend.dev`**, which only delivers to Angelo's own
+  Resend-account inbox. **To email real athletes (Tyler), verify a real sending domain in Resend** (add its
+  DNS records) and switch the Supabase Sender email to it — recommend `tylerbaleno.com` once bought. Until
+  then, Tyler's password is still set via the manual `set-password.mjs` (the self-reset email won't reach him).
 
 ## 3. Theme
 - Dark **"scouting card"** design in **Plum purple + gold**. Lives at `src/themes/tyler-baleno/`.
