@@ -96,7 +96,12 @@ emails go through Supabase's default sender, which is rate-limited and unreliabl
 outside inboxes until **custom SMTP (Resend)** is configured. So the `Invite user`
 dashboard button still isn't the reliable path yet.
 
-**Until SMTP is wired, activate a login manually** (no email needed):
+**The easy path: the `/admin` console.** Signed in as the platform admin (an id in
+`ADMIN_USER_IDS`), `/admin` shows an Athlete Logins console — invite an athlete to a
+slug, send a reset, or set a temp password, all from the UI. No Supabase dashboard,
+no scripts. The manual/script path below still works as a fallback.
+
+**Manual activation** (no email needed):
 
 ```
 # 1. Create the auth user (Supabase Dashboard → Authentication → Add user, auto-confirm)
@@ -153,8 +158,8 @@ Once C passes, athlete password reset is fully self-serve on their own site.
 
 ## Follow-ups that shrink this runbook
 
-- **In-app "add athlete" admin** so onboarding = one form in the dashboard (creates
-  the auth user + links the row + sends the invite), replacing the dashboard "Add
-  user" + `link-owner`/`set-password` scripts. Needs a platform-admin concept.
+- ~~In-app "add athlete" admin~~ — **done (2026-07-08):** the `/admin` console handles
+  invite/link/reset/temp-password. Still not in-app: creating the athlete data *record*
+  (seed step) and the bespoke skin.
 - `scripts/new-athlete.mjs <slug> <profile.json>` collapsing steps 1–2.
 - A route-file template if copying Tyler's ever drifts.
