@@ -137,9 +137,13 @@ keys can't be done for him.
      Sender email = an address on the verified domain (or `onboarding@resend.dev`
      for the test stage).
 5. Authentication → URL Configuration is already correct (Site URL =
-   `https://tyler-baleno-site.vercel.app`, `/auth/confirm` allowlisted). The default
-   Reset/Invite templates link to `{{ .ConfirmationURL }}`, which lands on
-   `/auth/confirm` — no template edits needed.
+   `https://tyler-baleno-site.vercel.app`, `/auth/confirm` allowlisted).
+6. **Edit the two email templates** (Authentication → Email Templates) — required, the
+   defaults point at Supabase's own verify endpoint, not our `/auth/confirm` route:
+   - **Invite user** → set the link href to
+     `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=invite`
+   - **Reset Password** → set the link href to
+     `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery`
 
 **C. Verify (together):**
 6. Live site → `/login` → "Forgot password?" → enter your own email → check inbox →
